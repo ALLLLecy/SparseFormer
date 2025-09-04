@@ -14,5 +14,5 @@ venv/
 *.bin
 output
 version.py
-workdir
 pytorch3d/
+workdir/
