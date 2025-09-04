@@ -16,3 +16,4 @@ output
 version.py
 pytorch3d/
 workdir/
+debug/
