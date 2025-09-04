@@ -133,5 +133,13 @@ if __name__ == '__main__':
                     'src/ingroup_inds_kernel.cu',
                 ]
             ),
+            make_cuda_ext(
+                name='multi_scale_deformable_attention',
+                module='pcdet.ops.deformable_attn',
+                sources=[
+                    'src/ms_deform_attn.cpp',
+                    'src/ms_deform_attn_cuda.cu',
+                ]
+            ),
         ],
     )

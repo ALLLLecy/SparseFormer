@@ -107,7 +107,7 @@ class CosineAnnealing(LRSchedulerStep):
         fai_optimizer.lr, fai_optimizer.mom = lr_max, self.moms[0]
 
         self.optimizer = fai_optimizer
-        self.total_step = total_step 
+        self.total_step = total_step
         self.warmup_iter = warmup_iter
         self.total_epoch = total_epoch
 
@@ -122,7 +122,7 @@ class CosineAnnealing(LRSchedulerStep):
             else:
                 self.mom_phases.append((int(start * total_step), total_step, lambda_func))
         assert self.mom_phases[0][0] == 0
-    
+
     def step(self, step, epoch):
         # update lr
         if step < self.warmup_iter:

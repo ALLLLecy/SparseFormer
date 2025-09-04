@@ -20,16 +20,23 @@ from pcdet.utils import common_utils
 
 def parse_config():
     parser = argparse.ArgumentParser(description='arg parser')
-    parser.add_argument('--cfg_file', type=str, default=None, help='specify the config for training')
+    parser.add_argument('--cfg_file',
+                        type=str,
+                        default="cfgs/sparse_models/voxelnext_sparse_transfusion_lidar.yaml",
+                        help='specify the config for training')
 
     parser.add_argument('--batch_size', type=int, default=None, required=False, help='batch size for training')
     parser.add_argument('--workers', type=int, default=4, help='number of workers for dataloader')
     parser.add_argument('--extra_tag', type=str, default='default', help='extra tag for this experiment')
-    parser.add_argument('--ckpt', type=str, default=None, help='checkpoint to start from')
+    parser.add_argument('--ckpt',
+                        type=str,
+                        default="/mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/workdir/mamba/voxelnext_zThTxy_diff_0.1dp_0.5sf_xywl_embed_3layer_ht_cross_attn_4bs_old_opt_densehm/ckpt/checkpoint_epoch_18.pth",
+                        help='checkpoint to start from')
     parser.add_argument('--pretrained_model', type=str, default=None, help='pretrained_model')
     parser.add_argument('--launcher', choices=['none', 'pytorch', 'slurm'], default='none')
     parser.add_argument('--tcp_port', type=int, default=18888, help='tcp port for distrbuted training')
     parser.add_argument('--local_rank', type=int, default=0, help='local rank for distributed training')
+    parser.add_argument('--local-rank', type=int, default=0, help='local rank for distributed training')
     parser.add_argument('--set', dest='set_cfgs', default=None, nargs=argparse.REMAINDER,
                         help='set extra config keys if needed')
 
@@ -42,9 +49,12 @@ def parse_config():
     parser.add_argument('--infer_time', action='store_true', default=False, help='calculate inference latency')
     parser.add_argument('--eval_map',  action='store_true', default=False, help='evaluate bev map segmentation')
 
-    parser.add_argument('--dataset', type=str, default='waymo')
-    parser.add_argument('--root_dir', type=str, default='.')
-    parser.add_argument('--output_dir', type=str, default='output')
+    parser.add_argument('--dataset', type=str, default='nuscenes')
+    parser.add_argument('--root_dir', type=str, default='..')
+    parser.add_argument('--output_dir',
+                        type=str,
+                        default='/mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/workdir/mamba/voxelnext_zThTxy_diff_0.1dp_0.5sf_xywl_embed_3layer_ht_cross_attn_4bs_old_opt_densehm'
+    )
 
     args = parser.parse_args()
 

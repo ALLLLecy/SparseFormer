@@ -192,7 +192,7 @@ class TransFusionHead(nn.Module):
         elif self.dataset_name == "Waymo":
             local_max[ :, 1, ] = F.max_pool2d(heatmap[:, 1], kernel_size=1, stride=1, padding=0)
             local_max[ :, 2, ] = F.max_pool2d(heatmap[:, 2], kernel_size=1, stride=1, padding=0)
-        heatmap = heatmap * (heatmap == local_max)
+        # heatmap = heatmap * (heatmap == local_max)
         x_grid, y_grid = heatmap.shape[-2:]
         heatmap = heatmap.view(batch_size, heatmap.shape[1], -1)
  
@@ -285,11 +285,11 @@ class TransFusionHead(nn.Module):
         return res_layer
 
     def forward(self, batch_dict):
-        feats = batch_dict['spatial_features_2d']
+        feats = batch_dict['spatial_features_2d'].dense()
 
         res = self.predict(feats)
         if not self.training:
-            bboxes = self.get_bboxes(res)
+            bboxes = self.get_bboxes_v2(res)
             batch_dict['final_box_dicts'] = bboxes
         else:
             gt_boxes = batch_dict['gt_boxes']
@@ -570,6 +570,154 @@ class TransFusionHead(nn.Module):
         final_box_preds = torch.cat([center, height, dim, rot], dim=1).permute(0, 2, 1)
         return final_box_preds
 
+    
+    def get_bboxes_v2(self, preds_dicts):
+
+        batch_size = preds_dicts["heatmap"].shape[0]
+        batch_score = preds_dicts["heatmap"].sigmoid()
+        one_hot = F.one_hot(
+            self.query_labels, num_classes=self.num_classes
+        ).permute(0, 2, 1)
+        batch_score = batch_score * preds_dicts["query_heatmap_score"] * one_hot
+        batch_center = preds_dicts["center"]
+        batch_height = preds_dicts["height"]
+        batch_dim = preds_dicts["dim"]
+        batch_rot = preds_dicts["rot"]
+        batch_vel = None
+        if "vel" in preds_dicts:
+            batch_vel = preds_dicts["vel"]
+        batch_iou = (preds_dicts['iou'] + 1) * 0.5 if 'iou' in preds_dicts else None
+
+        ret_dict = self.decode_bbox(
+            batch_score, batch_rot, batch_dim,
+            batch_center, batch_height, batch_vel,
+            filter=True,
+        )
+        if self.dataset_name == "nuScenes":
+                self.tasks = [
+                    # dict(
+                    #     num_class=8,
+                    #     class_names=[],
+                    #     indices=[0, 1, 2, 3, 4, 5, 6, 7],
+                    #     radius=-1,
+                    # ),
+                    dict(
+                        num_class=1,
+                        class_names=[],
+                        indices=[0],
+                        radius=0.2,
+                    ),
+                    dict(
+                        num_class=1,
+                        class_names=[],
+                        indices=[1],
+                        radius=0.2,
+                    ),
+                    dict(
+                        num_class=1,
+                        class_names=[],
+                        indices=[2],
+                        radius=0.2,
+                    ),
+                    dict(
+                        num_class=1,
+                        class_names=[],
+                        indices=[3],
+                        radius=0.2,
+                    ),
+                    dict(
+                        num_class=1,
+                        class_names=[],
+                        indices=[4],
+                        radius=0.2,
+                    ),
+                    dict(
+                        num_class=1,
+                        class_names=[],
+                        indices=[5],
+                        radius=0.2,
+                    ),
+                    dict(
+                        num_class=1,
+                        class_names=[],
+                        indices=[6],
+                        radius=0.2,
+                    ),
+                    dict(
+                        num_class=1,
+                        class_names=[],
+                        indices=[7],
+                        radius=0.2,
+                    ),
+                    dict(
+                        num_class=1,
+                        class_names=["pedestrian"],
+                        indices=[8],
+                        radius=0.175,
+                    ),
+                    dict(
+                        num_class=1,
+                        class_names=["traffic_cone"],
+                        indices=[9],
+                        radius=0.175,
+                    ),
+                ]
+        elif self.dataset_name == "Waymo":
+            self.tasks = [
+                dict(num_class=1, class_names=["Car"], indices=[0], radius=0.7),
+                dict(
+                    num_class=1, class_names=["Pedestrian"], indices=[1], radius=0.7
+                ),
+                dict(num_class=1, class_names=["Cyclist"], indices=[2], radius=0.7),
+            ]
+        for i in range(batch_size):
+            boxes3d = ret_dict[i]["pred_boxes"]
+            scores = ret_dict[i]["pred_scores"]
+            labels = ret_dict[i]["pred_labels"]
+            cmask = ret_dict[i]['cmask']
+
+            # IOU refine 
+            if self.model_cfg.POST_PROCESSING.get('USE_IOU_TO_RECTIFY_SCORE', False) and batch_iou is not None:
+                pred_iou = torch.clamp(batch_iou[i][0][cmask], min=0, max=1.0)
+                IOU_RECTIFIER = scores.new_tensor(self.model_cfg.POST_PROCESSING.IOU_RECTIFIER)
+                if len(IOU_RECTIFIER) == 1:
+                    IOU_RECTIFIER = IOU_RECTIFIER.repeat(self.num_classes)
+                scores = torch.pow(scores, 1 - IOU_RECTIFIER[labels]) * torch.pow(pred_iou, IOU_RECTIFIER[labels])
+            
+
+            if self.nms_cfg != None:
+                keep_mask = torch.zeros_like(scores)
+                for task in self.tasks:
+                    task_mask = torch.zeros_like(scores)
+                    for cls_idx in task["indices"]:
+                        task_mask += labels == cls_idx
+                    task_mask = task_mask.bool()
+                    if task["radius"] > 0:
+                        top_scores = scores[task_mask]
+                        boxes_for_nms = boxes3d[task_mask][:, :7].clone().detach()
+                        task_nms_config = copy.deepcopy(self.nms_cfg)
+                        task_nms_config.NMS_THRESH = task["radius"]
+                        task_keep_indices, _ = model_nms_utils.class_agnostic_nms(
+                                box_scores=top_scores, box_preds=boxes_for_nms,
+                                nms_config=task_nms_config, score_thresh=task_nms_config.SCORE_THRES)
+                    else:
+                        task_keep_indices = torch.arange(task_mask.sum())
+                    if task_keep_indices.shape[0] != 0:
+                        keep_indices = torch.where(task_mask != 0)[0][
+                            task_keep_indices
+                        ]
+                        keep_mask[keep_indices] = 1
+                keep_mask = keep_mask.bool()
+                ret_dict[i]['pred_boxes'] = boxes3d[keep_mask]
+                ret_dict[i]['pred_scores'] = scores[keep_mask]
+                ret_dict[i]['pred_labels'] = labels[keep_mask].int() + 1
+            else:  
+                # no nms
+                ret_dict[i]['pred_labels'] = ret_dict[i]['pred_labels'].int() + 1
+
+
+        return ret_dict 
+    
     def get_bboxes(self, preds_dicts):
 
         batch_size = preds_dicts["heatmap"].shape[0]

@@ -1,0 +1,1044 @@
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/torch/distributed/launch.py:181: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+2025-09-04 19:47:51,389   INFO  **********************Start logging**********************
+2025-09-04 19:47:51,389   INFO  CUDA_VISIBLE_DEVICES=ALL
+2025-09-04 19:47:51,390   INFO  Training in distributed mode : total_batch_size: 16
+2025-09-04 19:47:51,390   INFO  cfg_file         cfgs/sparse_models/sparse_former_base.yaml
+2025-09-04 19:47:51,390   INFO  batch_size       2
+2025-09-04 19:47:51,390   INFO  epochs           36
+2025-09-04 19:47:51,390   INFO  workers          12
+2025-09-04 19:47:51,390   INFO  extra_tag        default
+2025-09-04 19:47:51,390   INFO  ckpt             None
+2025-09-04 19:47:51,390   INFO  pretrained_model None
+2025-09-04 19:47:51,390   INFO  launcher         pytorch
+2025-09-04 19:47:51,390   INFO  tcp_port         18888
+2025-09-04 19:47:51,390   INFO  sync_bn          True
+2025-09-04 19:47:51,390   INFO  fix_random_seed  False
+2025-09-04 19:47:51,390   INFO  ckpt_save_interval 1
+2025-09-04 19:47:51,390   INFO  local_rank       0
+2025-09-04 19:47:51,390   INFO  max_ckpt_save_num 30
+2025-09-04 19:47:51,390   INFO  merge_all_iters_to_one_epoch False
+2025-09-04 19:47:51,390   INFO  set_cfgs         None
+2025-09-04 19:47:51,390   INFO  max_waiting_mins 0
+2025-09-04 19:47:51,390   INFO  start_epoch      0
+2025-09-04 19:47:51,390   INFO  num_epochs_to_eval 0
+2025-09-04 19:47:51,390   INFO  save_to_file     False
+2025-09-04 19:47:51,390   INFO  use_tqdm_to_record False
+2025-09-04 19:47:51,390   INFO  logger_iter_interval 50
+2025-09-04 19:47:51,391   INFO  ckpt_save_time_interval 300
+2025-09-04 19:47:51,391   INFO  wo_gpu_stat      True
+2025-09-04 19:47:51,391   INFO  use_amp          False
+2025-09-04 19:47:51,391   INFO  eval_map         False
+2025-09-04 19:47:51,391   INFO  dataset          nuscenes
+2025-09-04 19:47:51,391   INFO  root_dir         /mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2
+2025-09-04 19:47:51,391   INFO  output_dir       /mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/workdir/fshnet/encoder/fshnet_SPEncoder_3layer_1lc_zhx_.0diff_dense_hm_.3lr_.5wd
+2025-09-04 19:47:51,391   INFO  cfg.ROOT_DIR: /mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2
+2025-09-04 19:47:51,391   INFO  cfg.LOCAL_RANK: 0
+2025-09-04 19:47:51,391   INFO  cfg.CLASS_NAMES: ['car', 'truck', 'construction_vehicle', 'bus', 'trailer', 'barrier', 'motorcycle', 'bicycle', 'pedestrian', 'traffic_cone']
+2025-09-04 19:47:51,391   INFO  ----------- DATA_CONFIG -----------
+2025-09-04 19:47:51,391   INFO  cfg.DATA_CONFIG.DATASET: NuScenesDataset
+2025-09-04 19:47:51,391   INFO  cfg.DATA_CONFIG.DATA_PATH: /mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/data/nuscenes
+2025-09-04 19:47:51,391   INFO  cfg.DATA_CONFIG.VERSION: v1.0-trainval
+2025-09-04 19:47:51,391   INFO  cfg.DATA_CONFIG.MAX_SWEEPS: 10
+2025-09-04 19:47:51,391   INFO  cfg.DATA_CONFIG.PRED_VELOCITY: True
+2025-09-04 19:47:51,391   INFO  cfg.DATA_CONFIG.SET_NAN_VELOCITY_TO_ZEROS: True
+2025-09-04 19:47:51,391   INFO  cfg.DATA_CONFIG.FILTER_MIN_POINTS_IN_GT: 1
+2025-09-04 19:47:51,391   INFO  ----------- DATA_SPLIT -----------
+2025-09-04 19:47:51,391   INFO  cfg.DATA_CONFIG.DATA_SPLIT.train: train
+2025-09-04 19:47:51,391   INFO  cfg.DATA_CONFIG.DATA_SPLIT.test: val
+2025-09-04 19:47:51,391   INFO  ----------- INFO_PATH -----------
+2025-09-04 19:47:51,391   INFO  cfg.DATA_CONFIG.INFO_PATH.train: ['nuscenes_infos_10sweeps_train.pkl']
+2025-09-04 19:47:51,392   INFO  cfg.DATA_CONFIG.INFO_PATH.test: ['nuscenes_infos_10sweeps_val.pkl']
+2025-09-04 19:47:51,392   INFO  cfg.DATA_CONFIG.POINT_CLOUD_RANGE: [-54.0, -54.0, -5.0, 54.0, 54.0, 3.0]
+2025-09-04 19:47:51,392   INFO  cfg.DATA_CONFIG.BALANCED_RESAMPLING: False
+2025-09-04 19:47:51,392   INFO  ----------- DATA_AUGMENTOR -----------
+2025-09-04 19:47:51,392   INFO  cfg.DATA_CONFIG.DATA_AUGMENTOR.DISABLE_AUG_LIST: ['placeholder']
+2025-09-04 19:47:51,392   INFO  cfg.DATA_CONFIG.DATA_AUGMENTOR.AUG_CONFIG_LIST: [{'NAME': 'gt_sampling', 'DB_INFO_PATH': ['nuscenes_dbinfos_10sweeps_withvelo.pkl'], 'USE_SHARED_MEMORY': True, 'DB_DATA_PATH': ['nuscenes_10sweeps_withvelo_lidar.npy'], 'PREPARE': {'filter_by_min_points': ['car:5', 'truck:5', 'construction_vehicle:5', 'bus:5', 'trailer:5', 'barrier:5', 'motorcycle:5', 'bicycle:5', 'pedestrian:5', 'traffic_cone:5']}, 'SAMPLE_GROUPS': ['car:2', 'truck:3', 'construction_vehicle:7', 'bus:4', 'trailer:6', 'barrier:2', 'motorcycle:6', 'bicycle:6', 'pedestrian:2', 'traffic_cone:2'], 'NUM_POINT_FEATURES': 5, 'DATABASE_WITH_FAKELIDAR': False, 'REMOVE_EXTRA_WIDTH': [0.0, 0.0, 0.0], 'LIMIT_WHOLE_SCENE': True}, {'NAME': 'random_world_flip', 'ALONG_AXIS_LIST': ['x', 'y']}, {'NAME': 'random_world_rotation', 'WORLD_ROT_ANGLE': [-0.78539816, 0.78539816]}, {'NAME': 'random_world_scaling', 'WORLD_SCALE_RANGE': [0.9, 1.1]}, {'NAME': 'random_world_translation', 'NOISE_TRANSLATE_STD': [0.5, 0.5, 0.5]}]
+2025-09-04 19:47:51,437   INFO  ----------- POINT_FEATURE_ENCODING -----------
+2025-09-04 19:47:51,437   INFO  cfg.DATA_CONFIG.POINT_FEATURE_ENCODING.encoding_type: absolute_coordinates_encoding
+2025-09-04 19:47:51,438   INFO  cfg.DATA_CONFIG.POINT_FEATURE_ENCODING.used_feature_list: ['x', 'y', 'z', 'intensity', 'timestamp']
+2025-09-04 19:47:51,438   INFO  cfg.DATA_CONFIG.POINT_FEATURE_ENCODING.src_feature_list: ['x', 'y', 'z', 'intensity', 'timestamp']
+2025-09-04 19:47:51,438   INFO  cfg.DATA_CONFIG.DATA_PROCESSOR: [{'NAME': 'mask_points_and_boxes_outside_range', 'REMOVE_OUTSIDE_BOXES': True}, {'NAME': 'shuffle_points', 'SHUFFLE_ENABLED': {'train': True, 'test': True}}, {'NAME': 'transform_points_to_voxels_placeholder', 'VOXEL_SIZE': [0.3, 0.3, 0.2]}]
+2025-09-04 19:47:51,438   INFO  cfg.DATA_CONFIG._BASE_CONFIG_: cfgs/dataset_configs/nuscenes_dataset.yaml
+2025-09-04 19:47:51,438   INFO  ----------- SAMPLED_INTERVAL -----------
+2025-09-04 19:47:51,438   INFO  cfg.DATA_CONFIG.SAMPLED_INTERVAL.train: 1
+2025-09-04 19:47:51,438   INFO  cfg.DATA_CONFIG.SAMPLED_INTERVAL.test: 1
+2025-09-04 19:47:51,438   INFO  ----------- MODEL -----------
+2025-09-04 19:47:51,438   INFO  cfg.MODEL.NAME: TransFusion
+2025-09-04 19:47:51,438   INFO  ----------- VFE -----------
+2025-09-04 19:47:51,438   INFO  cfg.MODEL.VFE.NAME: DynamicVoxelVFE
+2025-09-04 19:47:51,438   INFO  cfg.MODEL.VFE.WITH_DISTANCE: False
+2025-09-04 19:47:51,438   INFO  cfg.MODEL.VFE.USE_ABSLOTE_XYZ: True
+2025-09-04 19:47:51,438   INFO  cfg.MODEL.VFE.USE_NORM: True
+2025-09-04 19:47:51,439   INFO  cfg.MODEL.VFE.NUM_FILTERS: [64, 64]
+2025-09-04 19:47:51,439   INFO  ----------- BACKBONE_3D -----------
+2025-09-04 19:47:51,439   INFO  cfg.MODEL.BACKBONE_3D.NAME: FSHNet_nusc
+2025-09-04 19:47:51,439   INFO  cfg.MODEL.BACKBONE_3D.FEATURE_DIM: 128
+2025-09-04 19:47:51,439   INFO  ----------- SPENCODER -----------
+2025-09-04 19:47:51,439   INFO  cfg.MODEL.BACKBONE_3D.SPENCODER.DIM: 3
+2025-09-04 19:47:51,439   INFO  cfg.MODEL.BACKBONE_3D.SPENCODER.NUM_LAYERS: 3
+2025-09-04 19:47:51,439   INFO  cfg.MODEL.BACKBONE_3D.SPENCODER.WINDOW_SHAPE: [9, 9, 5]
+2025-09-04 19:47:51,439   INFO  cfg.MODEL.BACKBONE_3D.SPENCODER.SHUFFLE: False
+2025-09-04 19:47:51,439   INFO  cfg.MODEL.BACKBONE_3D.SPENCODER.DEPTH: 8
+2025-09-04 19:47:51,439   INFO  cfg.MODEL.BACKBONE_3D.SPENCODER.ORDERS: [['z', 'z-trans'], ['hilbert', 'hilbert-trans'], ['x', 'y']]
+2025-09-04 19:47:51,439   INFO  ----------- SMSA -----------
+2025-09-04 19:47:51,439   INFO  cfg.MODEL.BACKBONE_3D.SPENCODER.SMSA.EMBED_DIM: 128
+2025-09-04 19:47:51,439   INFO  cfg.MODEL.BACKBONE_3D.SPENCODER.SMSA.DEPTH: 8
+2025-09-04 19:47:51,439   INFO  cfg.MODEL.BACKBONE_3D.SPENCODER.SMSA.NUM_LEVELS: 3
+2025-09-04 19:47:51,440   INFO  cfg.MODEL.BACKBONE_3D.SPENCODER.SMSA.WINDOW_SHAPE: [9, 9, 5]
+2025-09-04 19:47:51,440   INFO  cfg.MODEL.BACKBONE_3D.SPENCODER.SMSA.DROP_PATH: 0.2
+2025-09-04 19:47:51,440   INFO  cfg.MODEL.BACKBONE_3D.SPENCODER.SMSA.SPATIAL_ENHANCE: True
+2025-09-04 19:47:51,440   INFO  cfg.MODEL.BACKBONE_3D.SPENCODER.SMSA.FUSED_ADD_NORM: True
+2025-09-04 19:47:51,440   INFO  cfg.MODEL.BACKBONE_3D.SPENCODER.SMSA.RMS_NORM: True
+2025-09-04 19:47:51,440   INFO  cfg.MODEL.BACKBONE_3D.SPENCODER.SMSA.NORM_EPSILON: 1e-05
+2025-09-04 19:47:51,440   INFO  cfg.MODEL.BACKBONE_3D.SPENCODER.SMSA.RESIDUAL_IN_FP32: True
+2025-09-04 19:47:51,440   INFO  cfg.MODEL.BACKBONE_3D.SPENCODER.SMSA.DIFF_COEF: 0.0
+2025-09-04 19:47:51,440   INFO  cfg.MODEL.BACKBONE_3D.SPENCODER.SMSA.DIFF_KERNEL: [7, 5, 3]
+2025-09-04 19:47:51,440   INFO  cfg.MODEL.BACKBONE_3D.AFD_FEATURE_DIM: 128
+2025-09-04 19:47:51,440   INFO  cfg.MODEL.BACKBONE_3D.AFD_NUM_LAYERS: 4
+2025-09-04 19:47:51,440   INFO  cfg.MODEL.BACKBONE_3D.AFD_NUM_SBB: [2, 1, 1]
+2025-09-04 19:47:51,440   INFO  cfg.MODEL.BACKBONE_3D.AFD_DOWN_STRIDE: [1, 2, 2]
+2025-09-04 19:47:51,440   INFO  cfg.MODEL.BACKBONE_3D.AFD_DOWN_KERNEL_SIZE: [3, 3, 3]
+2025-09-04 19:47:51,440   INFO  cfg.MODEL.BACKBONE_3D.AFD: True
+2025-09-04 19:47:51,441   INFO  cfg.MODEL.BACKBONE_3D.FG_THRESHOLD: 0.2
+2025-09-04 19:47:51,441   INFO  cfg.MODEL.BACKBONE_3D.FEATMAP_STRIDE: 2
+2025-09-04 19:47:51,441   INFO  cfg.MODEL.BACKBONE_3D.DETACH_FEATURE: True
+2025-09-04 19:47:51,441   INFO  cfg.MODEL.BACKBONE_3D.GREOUP_POOLING_KERNEL_SIZE: [9, 15, 5, 5]
+2025-09-04 19:47:51,441   INFO  cfg.MODEL.BACKBONE_3D.GROUP_CLASS_NAMES: [['car', 'truck', 'construction_vehicle'], ['bus', 'trailer'], ['barrier', 'motorcycle', 'bicycle', 'pedestrian', 'traffic_cone']]
+2025-09-04 19:47:51,441   INFO  ----------- DENSE_HEAD -----------
+2025-09-04 19:47:51,441   INFO  cfg.MODEL.DENSE_HEAD.CLASS_AGNOSTIC: False
+2025-09-04 19:47:51,441   INFO  cfg.MODEL.DENSE_HEAD.NAME: TransFusionHead
+2025-09-04 19:47:51,441   INFO  cfg.MODEL.DENSE_HEAD.QUERY_RADIUS: 20
+2025-09-04 19:47:51,441   INFO  cfg.MODEL.DENSE_HEAD.QUERY_LOCAL: True
+2025-09-04 19:47:51,441   INFO  cfg.MODEL.DENSE_HEAD.USE_BIAS_BEFORE_NORM: True
+2025-09-04 19:47:51,441   INFO  cfg.MODEL.DENSE_HEAD.INPUT_FEATURES: 128
+2025-09-04 19:47:51,441   INFO  cfg.MODEL.DENSE_HEAD.NUM_PROPOSALS: 600
+2025-09-04 19:47:51,441   INFO  cfg.MODEL.DENSE_HEAD.HIDDEN_CHANNEL: 128
+2025-09-04 19:47:51,441   INFO  cfg.MODEL.DENSE_HEAD.NUM_CLASSES: 10
+2025-09-04 19:47:51,441   INFO  cfg.MODEL.DENSE_HEAD.NUM_HEADS: 8
+2025-09-04 19:47:51,442   INFO  cfg.MODEL.DENSE_HEAD.NMS_KERNEL_SIZE: 3
+2025-09-04 19:47:51,442   INFO  cfg.MODEL.DENSE_HEAD.FFN_CHANNEL: 256
+2025-09-04 19:47:51,442   INFO  cfg.MODEL.DENSE_HEAD.DROPOUT: 0.1
+2025-09-04 19:47:51,442   INFO  cfg.MODEL.DENSE_HEAD.BN_MOMENTUM: 0.1
+2025-09-04 19:47:51,442   INFO  cfg.MODEL.DENSE_HEAD.ACTIVATION: relu
+2025-09-04 19:47:51,442   INFO  cfg.MODEL.DENSE_HEAD.NUM_HM_CONV: 2
+2025-09-04 19:47:51,442   INFO  ----------- SEPARATE_HEAD_CFG -----------
+2025-09-04 19:47:51,442   INFO  cfg.MODEL.DENSE_HEAD.SEPARATE_HEAD_CFG.HEAD_ORDER: ['center', 'height', 'dim', 'rot', 'vel', 'iou']
+2025-09-04 19:47:51,442   INFO  ----------- HEAD_DICT -----------
+2025-09-04 19:47:51,442   INFO  ----------- center -----------
+2025-09-04 19:47:51,442   INFO  cfg.MODEL.DENSE_HEAD.SEPARATE_HEAD_CFG.HEAD_DICT.center.out_channels: 2
+2025-09-04 19:47:51,442   INFO  cfg.MODEL.DENSE_HEAD.SEPARATE_HEAD_CFG.HEAD_DICT.center.num_conv: 2
+2025-09-04 19:47:51,442   INFO  ----------- height -----------
+2025-09-04 19:47:51,442   INFO  cfg.MODEL.DENSE_HEAD.SEPARATE_HEAD_CFG.HEAD_DICT.height.out_channels: 1
+2025-09-04 19:47:51,442   INFO  cfg.MODEL.DENSE_HEAD.SEPARATE_HEAD_CFG.HEAD_DICT.height.num_conv: 2
+2025-09-04 19:47:51,443   INFO  ----------- dim -----------
+2025-09-04 19:47:51,443   INFO  cfg.MODEL.DENSE_HEAD.SEPARATE_HEAD_CFG.HEAD_DICT.dim.out_channels: 3
+2025-09-04 19:47:51,443   INFO  cfg.MODEL.DENSE_HEAD.SEPARATE_HEAD_CFG.HEAD_DICT.dim.num_conv: 2
+2025-09-04 19:47:51,443   INFO  ----------- rot -----------
+2025-09-04 19:47:51,443   INFO  cfg.MODEL.DENSE_HEAD.SEPARATE_HEAD_CFG.HEAD_DICT.rot.out_channels: 2
+2025-09-04 19:47:51,443   INFO  cfg.MODEL.DENSE_HEAD.SEPARATE_HEAD_CFG.HEAD_DICT.rot.num_conv: 2
+2025-09-04 19:47:51,443   INFO  ----------- vel -----------
+2025-09-04 19:47:51,443   INFO  cfg.MODEL.DENSE_HEAD.SEPARATE_HEAD_CFG.HEAD_DICT.vel.out_channels: 2
+2025-09-04 19:47:51,443   INFO  cfg.MODEL.DENSE_HEAD.SEPARATE_HEAD_CFG.HEAD_DICT.vel.num_conv: 2
+2025-09-04 19:47:51,443   INFO  ----------- iou -----------
+2025-09-04 19:47:51,443   INFO  cfg.MODEL.DENSE_HEAD.SEPARATE_HEAD_CFG.HEAD_DICT.iou.out_channels: 1
+2025-09-04 19:47:51,443   INFO  cfg.MODEL.DENSE_HEAD.SEPARATE_HEAD_CFG.HEAD_DICT.iou.num_conv: 2
+2025-09-04 19:47:51,443   INFO  ----------- TARGET_ASSIGNER_CONFIG -----------
+2025-09-04 19:47:51,443   INFO  cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.FEATURE_MAP_STRIDE: 2
+2025-09-04 19:47:51,443   INFO  cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.DATASET: nuScenes
+2025-09-04 19:47:51,443   INFO  cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.GAUSSIAN_OVERLAP: 0.1
+2025-09-04 19:47:51,444   INFO  cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.MIN_RADIUS: 2
+2025-09-04 19:47:51,444   INFO  ----------- HUNGARIAN_ASSIGNER -----------
+2025-09-04 19:47:51,444   INFO  ----------- cls_cost -----------
+2025-09-04 19:47:51,444   INFO  cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.HUNGARIAN_ASSIGNER.cls_cost.gamma: 2.0
+2025-09-04 19:47:51,444   INFO  cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.HUNGARIAN_ASSIGNER.cls_cost.alpha: 0.25
+2025-09-04 19:47:51,444   INFO  cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.HUNGARIAN_ASSIGNER.cls_cost.weight: 0.15
+2025-09-04 19:47:51,444   INFO  ----------- reg_cost -----------
+2025-09-04 19:47:51,444   INFO  cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.HUNGARIAN_ASSIGNER.reg_cost.weight: 0.25
+2025-09-04 19:47:51,444   INFO  ----------- iou_cost -----------
+2025-09-04 19:47:51,444   INFO  cfg.MODEL.DENSE_HEAD.TARGET_ASSIGNER_CONFIG.HUNGARIAN_ASSIGNER.iou_cost.weight: 0.25
+2025-09-04 19:47:51,444   INFO  ----------- LOSS_CONFIG -----------
+2025-09-04 19:47:51,444   INFO  ----------- LOSS_WEIGHTS -----------
+2025-09-04 19:47:51,444   INFO  cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.LOSS_WEIGHTS.cls_weight: 1.0
+2025-09-04 19:47:51,444   INFO  cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.LOSS_WEIGHTS.bbox_weight: 0.25
+2025-09-04 19:47:51,444   INFO  cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.LOSS_WEIGHTS.hm_weight: 1.0
+2025-09-04 19:47:51,445   INFO  cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.LOSS_WEIGHTS.iou_weight: 0.5
+2025-09-04 19:47:51,445   INFO  cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.LOSS_WEIGHTS.iou_reg_weight: 0.5
+2025-09-04 19:47:51,445   INFO  cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.LOSS_WEIGHTS.code_weights: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.2, 0.2]
+2025-09-04 19:47:51,445   INFO  ----------- LOSS_CLS -----------
+2025-09-04 19:47:51,445   INFO  cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.LOSS_CLS.use_sigmoid: True
+2025-09-04 19:47:51,445   INFO  cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.LOSS_CLS.gamma: 2.0
+2025-09-04 19:47:51,445   INFO  cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.LOSS_CLS.alpha: 0.25
+2025-09-04 19:47:51,445   INFO  cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.LOSS_IOU: True
+2025-09-04 19:47:51,445   INFO  cfg.MODEL.DENSE_HEAD.LOSS_CONFIG.LOSS_IOU_REG: True
+2025-09-04 19:47:51,445   INFO  ----------- POST_PROCESSING -----------
+2025-09-04 19:47:51,445   INFO  cfg.MODEL.DENSE_HEAD.POST_PROCESSING.SCORE_THRESH: 0.0
+2025-09-04 19:47:51,445   INFO  cfg.MODEL.DENSE_HEAD.POST_PROCESSING.POST_CENTER_RANGE: [-61.2, -61.2, -10.0, 61.2, 61.2, 10.0]
+2025-09-04 19:47:51,445   INFO  cfg.MODEL.DENSE_HEAD.POST_PROCESSING.USE_IOU_TO_RECTIFY_SCORE: True
+2025-09-04 19:47:51,445   INFO  cfg.MODEL.DENSE_HEAD.POST_PROCESSING.IOU_RECTIFIER: [0.5]
+2025-09-04 19:47:51,445   INFO  ----------- NMS_CONFIG -----------
+2025-09-04 19:47:51,446   INFO  cfg.MODEL.DENSE_HEAD.NMS_CONFIG.NMS_TYPE: nms_gpu
+2025-09-04 19:47:51,446   INFO  cfg.MODEL.DENSE_HEAD.NMS_CONFIG.NMS_THRESH: 0.2
+2025-09-04 19:47:51,446   INFO  cfg.MODEL.DENSE_HEAD.NMS_CONFIG.NMS_PRE_MAXSIZE: 1000
+2025-09-04 19:47:51,446   INFO  cfg.MODEL.DENSE_HEAD.NMS_CONFIG.NMS_POST_MAXSIZE: 100
+2025-09-04 19:47:51,446   INFO  cfg.MODEL.DENSE_HEAD.NMS_CONFIG.SCORE_THRES: 0.0
+2025-09-04 19:47:51,446   INFO  ----------- POST_PROCESSING -----------
+2025-09-04 19:47:51,446   INFO  cfg.MODEL.POST_PROCESSING.RECALL_THRESH_LIST: [0.3, 0.5, 0.7]
+2025-09-04 19:47:51,446   INFO  cfg.MODEL.POST_PROCESSING.SCORE_THRESH: 0.1
+2025-09-04 19:47:51,446   INFO  cfg.MODEL.POST_PROCESSING.OUTPUT_RAW_SCORE: False
+2025-09-04 19:47:51,446   INFO  cfg.MODEL.POST_PROCESSING.EVAL_METRIC: kitti
+2025-09-04 19:47:51,446   INFO  ----------- NMS_CONFIG -----------
+2025-09-04 19:47:51,446   INFO  cfg.MODEL.POST_PROCESSING.NMS_CONFIG.MULTI_CLASSES_NMS: True
+2025-09-04 19:47:51,446   INFO  cfg.MODEL.POST_PROCESSING.NMS_CONFIG.NMS_TYPE: nms_gpu
+2025-09-04 19:47:51,446   INFO  cfg.MODEL.POST_PROCESSING.NMS_CONFIG.NMS_THRESH: 0.2
+2025-09-04 19:47:51,446   INFO  cfg.MODEL.POST_PROCESSING.NMS_CONFIG.NMS_PRE_MAXSIZE: 1000
+2025-09-04 19:47:51,447   INFO  cfg.MODEL.POST_PROCESSING.NMS_CONFIG.NMS_POST_MAXSIZE: 83
+2025-09-04 19:47:51,447   INFO  ----------- OPTIMIZATION -----------
+2025-09-04 19:47:51,447   INFO  cfg.OPTIMIZATION.BATCH_SIZE_PER_GPU: 2
+2025-09-04 19:47:51,447   INFO  cfg.OPTIMIZATION.NUM_EPOCHS: 36
+2025-09-04 19:47:51,447   INFO  cfg.OPTIMIZATION.OPTIMIZER: adam_onecycle
+2025-09-04 19:47:51,447   INFO  cfg.OPTIMIZATION.LR: 0.003
+2025-09-04 19:47:51,447   INFO  cfg.OPTIMIZATION.WEIGHT_DECAY: 0.05
+2025-09-04 19:47:51,447   INFO  cfg.OPTIMIZATION.MOMENTUM: 0.9
+2025-09-04 19:47:51,447   INFO  cfg.OPTIMIZATION.MOMS: [0.95, 0.85]
+2025-09-04 19:47:51,447   INFO  cfg.OPTIMIZATION.PCT_START: 0.4
+2025-09-04 19:47:51,447   INFO  cfg.OPTIMIZATION.DIV_FACTOR: 10
+2025-09-04 19:47:51,447   INFO  cfg.OPTIMIZATION.DECAY_STEP_LIST: [35, 45]
+2025-09-04 19:47:51,447   INFO  cfg.OPTIMIZATION.LR_DECAY: 0.1
+2025-09-04 19:47:51,447   INFO  cfg.OPTIMIZATION.LR_CLIP: 1e-07
+2025-09-04 19:47:51,447   INFO  cfg.OPTIMIZATION.LR_WARMUP: False
+2025-09-04 19:47:51,448   INFO  cfg.OPTIMIZATION.WARMUP_EPOCH: 1
+2025-09-04 19:47:51,448   INFO  cfg.OPTIMIZATION.GRAD_NORM_CLIP: 10
+2025-09-04 19:47:51,448   INFO  cfg.OPTIMIZATION.LOSS_SCALE_FP16: 32
+2025-09-04 19:47:51,448   INFO  ----------- HOOK -----------
+2025-09-04 19:47:51,448   INFO  ----------- DisableAugmentationHook -----------
+2025-09-04 19:47:51,448   INFO  cfg.HOOK.DisableAugmentationHook.DISABLE_AUG_LIST: ['gt_sampling']
+2025-09-04 19:47:51,448   INFO  cfg.HOOK.DisableAugmentationHook.NUM_LAST_EPOCHS: 5
+2025-09-04 19:47:51,448   INFO  cfg.TAG: sparse_former_base
+2025-09-04 19:47:51,448   INFO  cfg.EXP_GROUP_PATH: sparse_models
+2025-09-04 19:47:51,448   INFO  cfg.OUTPUT_DIR: /mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/workdir/fshnet/encoder/fshnet_SPEncoder_3layer_1lc_zhx_.0diff_dense_hm_.3lr_.5wd
+2025-09-04 19:47:51,462   INFO  ----------- Create dataloader & network & optimizer -----------
+2025-09-04 19:47:57,030   INFO  Database filter by min points car: 339949 => 294532
+2025-09-04 19:47:57,041   INFO  Database filter by min points truck: 65262 => 60344
+2025-09-04 19:47:57,042   INFO  Database filter by min points construction_vehicle: 11050 => 10589
+2025-09-04 19:47:57,044   INFO  Database filter by min points bus: 12286 => 11619
+2025-09-04 19:47:57,046   INFO  Database filter by min points trailer: 19202 => 17934
+2025-09-04 19:47:57,057   INFO  Database filter by min points barrier: 107507 => 101993
+2025-09-04 19:47:57,059   INFO  Database filter by min points motorcycle: 8846 => 8055
+2025-09-04 19:47:57,060   INFO  Database filter by min points bicycle: 8185 => 7531
+2025-09-04 19:47:57,075   INFO  Database filter by min points pedestrian: 161928 => 148520
+2025-09-04 19:47:57,083   INFO  Database filter by min points traffic_cone: 62964 => 55504
+2025-09-04 19:47:57,084   INFO  Loading GT database to shared memory
+eflops103:23:23 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:23:23 [0] NCCL INFO Bootstrap : Using bond0:10.16.9.231<0>
+eflops103:23:23 [0] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+eflops103:23:23 [0] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+eflops103:23:23 [0] NCCL INFO cudaDriverVersion 12050
+eflops103:25:25 [2] NCCL INFO cudaDriverVersion 12050
+eflops103:24:24 [1] NCCL INFO cudaDriverVersion 12050
+eflops103:26:26 [3] NCCL INFO cudaDriverVersion 12050
+NCCL version 2.18.5+cuda11.8
+eflops103:28:28 [5] NCCL INFO cudaDriverVersion 12050
+eflops103:28:28 [5] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:24:24 [1] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:25:25 [2] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:26:26 [3] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:29:29 [6] NCCL INFO cudaDriverVersion 12050
+eflops103:29:29 [6] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:27:27 [4] NCCL INFO cudaDriverVersion 12050
+eflops103:30:30 [7] NCCL INFO cudaDriverVersion 12050
+eflops103:27:27 [4] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:30:30 [7] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:24:24 [1] NCCL INFO Bootstrap : Using bond0:10.16.9.231<0>
+eflops103:25:25 [2] NCCL INFO Bootstrap : Using bond0:10.16.9.231<0>
+eflops103:30:30 [7] NCCL INFO Bootstrap : Using bond0:10.16.9.231<0>
+eflops103:24:24 [1] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+eflops103:25:25 [2] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+eflops103:24:24 [1] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+eflops103:25:25 [2] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+eflops103:30:30 [7] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+eflops103:30:30 [7] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+eflops103:28:28 [5] NCCL INFO Bootstrap : Using bond0:10.16.9.231<0>
+eflops103:27:27 [4] NCCL INFO Bootstrap : Using bond0:10.16.9.231<0>
+eflops103:28:28 [5] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+eflops103:28:28 [5] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+eflops103:27:27 [4] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+eflops103:27:27 [4] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+eflops103:26:26 [3] NCCL INFO Bootstrap : Using bond0:10.16.9.231<0>
+eflops103:29:29 [6] NCCL INFO Bootstrap : Using bond0:10.16.9.231<0>
+eflops103:26:26 [3] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+eflops103:26:26 [3] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+eflops103:29:29 [6] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin_v6 symbol.
+eflops103:29:29 [6] NCCL INFO NET/Plugin: Failed to find ncclCollNetPlugin symbol (v4 or v5).
+eflops103:30:103 [7] NCCL INFO Plugin Path : /usr/local/nccl-rdma-sharp-plugins/lib/libnccl-net.so
+eflops103:30:103 [7] NCCL INFO P2P plugin IBext
+eflops103:30:103 [7] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:27:100 [4] NCCL INFO Plugin Path : /usr/local/nccl-rdma-sharp-plugins/lib/libnccl-net.so
+eflops103:27:100 [4] NCCL INFO P2P plugin IBext
+eflops103:27:100 [4] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:29:106 [6] NCCL INFO Plugin Path : /usr/local/nccl-rdma-sharp-plugins/lib/libnccl-net.so
+eflops103:29:106 [6] NCCL INFO P2P plugin IBext
+eflops103:29:106 [6] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+
+eflops103:27:100 [4] ibvwrap.c:66 NCCL WARN Call to ibv_open_device failed
+
+eflops103:30:103 [7] ibvwrap.c:66 NCCL WARN Call to ibv_open_device failed
+
+eflops103:27:100 [4] p2p_plugin.c:233 NCCL WARN NET/IB : Unable to open device mlx5_bond_0
+
+eflops103:30:103 [7] p2p_plugin.c:233 NCCL WARN NET/IB : Unable to open device mlx5_bond_0
+eflops103:27:100 [4] NCCL INFO NET/IB : No device found.
+
+eflops103:29:106 [6] ibvwrap.c:66 NCCL WARN Call to ibv_open_device failed
+eflops103:30:103 [7] NCCL INFO NET/IB : No device found.
+
+eflops103:29:106 [6] p2p_plugin.c:233 NCCL WARN NET/IB : Unable to open device mlx5_bond_0
+eflops103:29:106 [6] NCCL INFO NET/IB : No device found.
+eflops103:27:100 [4] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+eflops103:27:100 [4] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:30:103 [7] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+eflops103:29:106 [6] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+eflops103:30:103 [7] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:29:106 [6] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:24:101 [1] NCCL INFO Plugin Path : /usr/local/nccl-rdma-sharp-plugins/lib/libnccl-net.so
+eflops103:24:101 [1] NCCL INFO P2P plugin IBext
+eflops103:24:101 [1] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:28:102 [5] NCCL INFO Plugin Path : /usr/local/nccl-rdma-sharp-plugins/lib/libnccl-net.so
+eflops103:28:102 [5] NCCL INFO P2P plugin IBext
+eflops103:28:102 [5] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:25:104 [2] NCCL INFO Plugin Path : /usr/local/nccl-rdma-sharp-plugins/lib/libnccl-net.so
+eflops103:25:104 [2] NCCL INFO P2P plugin IBext
+eflops103:25:104 [2] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:26:105 [3] NCCL INFO Plugin Path : /usr/local/nccl-rdma-sharp-plugins/lib/libnccl-net.so
+eflops103:26:105 [3] NCCL INFO P2P plugin IBext
+eflops103:26:105 [3] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:30:103 [7] NCCL INFO NET/Socket : Using [0]bond0:10.16.9.231<0>
+eflops103:30:103 [7] NCCL INFO Using network Socket
+eflops103:27:100 [4] NCCL INFO NET/Socket : Using [0]bond0:10.16.9.231<0>
+eflops103:29:106 [6] NCCL INFO NET/Socket : Using [0]bond0:10.16.9.231<0>
+eflops103:29:106 [6] NCCL INFO Using network Socket
+eflops103:27:100 [4] NCCL INFO Using network Socket
+
+eflops103:24:101 [1] ibvwrap.c:66 NCCL WARN Call to ibv_open_device failed
+
+eflops103:24:101 [1] p2p_plugin.c:233 NCCL WARN NET/IB : Unable to open device mlx5_bond_0
+eflops103:24:101 [1] NCCL INFO NET/IB : No device found.
+eflops103:24:101 [1] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+eflops103:24:101 [1] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+
+eflops103:28:102 [5] ibvwrap.c:66 NCCL WARN Call to ibv_open_device failed
+
+eflops103:28:102 [5] p2p_plugin.c:233 NCCL WARN NET/IB : Unable to open device mlx5_bond_0
+eflops103:28:102 [5] NCCL INFO NET/IB : No device found.
+eflops103:28:102 [5] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+eflops103:28:102 [5] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+
+eflops103:25:104 [2] ibvwrap.c:66 NCCL WARN Call to ibv_open_device failed
+
+eflops103:25:104 [2] p2p_plugin.c:233 NCCL WARN NET/IB : Unable to open device mlx5_bond_0
+eflops103:25:104 [2] NCCL INFO NET/IB : No device found.
+eflops103:25:104 [2] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+eflops103:25:104 [2] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+
+eflops103:26:105 [3] ibvwrap.c:66 NCCL WARN Call to ibv_open_device failed
+
+eflops103:26:105 [3] p2p_plugin.c:233 NCCL WARN NET/IB : Unable to open device mlx5_bond_0
+eflops103:26:105 [3] NCCL INFO NET/IB : No device found.
+eflops103:26:105 [3] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+eflops103:26:105 [3] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:24:101 [1] NCCL INFO NET/Socket : Using [0]bond0:10.16.9.231<0>
+eflops103:24:101 [1] NCCL INFO Using network Socket
+eflops103:28:102 [5] NCCL INFO NET/Socket : Using [0]bond0:10.16.9.231<0>
+eflops103:28:102 [5] NCCL INFO Using network Socket
+eflops103:25:104 [2] NCCL INFO NET/Socket : Using [0]bond0:10.16.9.231<0>
+eflops103:25:104 [2] NCCL INFO Using network Socket
+eflops103:26:105 [3] NCCL INFO NET/Socket : Using [0]bond0:10.16.9.231<0>
+eflops103:26:105 [3] NCCL INFO Using network Socket
+eflops103:23:99 [0] NCCL INFO Plugin Path : /usr/local/nccl-rdma-sharp-plugins/lib/libnccl-net.so
+eflops103:23:99 [0] NCCL INFO P2P plugin IBext
+eflops103:23:99 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+
+eflops103:23:99 [0] ibvwrap.c:66 NCCL WARN Call to ibv_open_device failed
+
+eflops103:23:99 [0] p2p_plugin.c:233 NCCL WARN NET/IB : Unable to open device mlx5_bond_0
+eflops103:23:99 [0] NCCL INFO NET/IB : No device found.
+eflops103:23:99 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+eflops103:23:99 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to bond
+eflops103:23:99 [0] NCCL INFO NET/Socket : Using [0]bond0:10.16.9.231<0>
+eflops103:23:99 [0] NCCL INFO Using network Socket
+eflops103:23:99 [0] NCCL INFO comm 0x11405e60 rank 0 nranks 8 cudaDev 0 nvmlDev 0 busId 4f000 commId 0x2225ac6fa87a1ddb - Init START
+eflops103:30:103 [7] NCCL INFO comm 0x11c31f20 rank 7 nranks 8 cudaDev 7 nvmlDev 7 busId a4000 commId 0x2225ac6fa87a1ddb - Init START
+eflops103:29:106 [6] NCCL INFO comm 0x114cdf40 rank 6 nranks 8 cudaDev 6 nvmlDev 6 busId a0000 commId 0x2225ac6fa87a1ddb - Init START
+eflops103:24:101 [1] NCCL INFO comm 0x10d78780 rank 1 nranks 8 cudaDev 1 nvmlDev 1 busId 50000 commId 0x2225ac6fa87a1ddb - Init START
+eflops103:26:105 [3] NCCL INFO comm 0x11c03220 rank 3 nranks 8 cudaDev 3 nvmlDev 3 busId 57000 commId 0x2225ac6fa87a1ddb - Init START
+eflops103:27:100 [4] NCCL INFO comm 0x11391750 rank 4 nranks 8 cudaDev 4 nvmlDev 4 busId 9c000 commId 0x2225ac6fa87a1ddb - Init START
+eflops103:25:104 [2] NCCL INFO comm 0x11734fb0 rank 2 nranks 8 cudaDev 2 nvmlDev 2 busId 53000 commId 0x2225ac6fa87a1ddb - Init START
+eflops103:28:102 [5] NCCL INFO comm 0x111e7dc0 rank 5 nranks 8 cudaDev 5 nvmlDev 5 busId 9d000 commId 0x2225ac6fa87a1ddb - Init START
+eflops103:30:103 [7] NCCL INFO Setting affinity for GPU 7 to ffff,fff00000,00ffffff,f0000000
+eflops103:27:100 [4] NCCL INFO Setting affinity for GPU 4 to ffff,fff00000,00ffffff,f0000000
+eflops103:29:106 [6] NCCL INFO Setting affinity for GPU 6 to ffff,fff00000,00ffffff,f0000000
+eflops103:23:99 [0] NCCL INFO Setting affinity for GPU 0 to 0fffff,ff000000,0fffffff
+eflops103:26:105 [3] NCCL INFO Setting affinity for GPU 3 to 0fffff,ff000000,0fffffff
+eflops103:24:101 [1] NCCL INFO Setting affinity for GPU 1 to 0fffff,ff000000,0fffffff
+eflops103:25:104 [2] NCCL INFO Setting affinity for GPU 2 to 0fffff,ff000000,0fffffff
+eflops103:28:102 [5] NCCL INFO Setting affinity for GPU 5 to ffff,fff00000,00ffffff,f0000000
+eflops103:29:106 [6] NCCL INFO Trees [0] 7/-1/-1->6->5 [1] 7/-1/-1->6->5
+eflops103:30:103 [7] NCCL INFO Trees [0] -1/-1/-1->7->6 [1] -1/-1/-1->7->6
+eflops103:30:103 [7] NCCL INFO P2P Chunksize set to 131072
+eflops103:29:106 [6] NCCL INFO P2P Chunksize set to 131072
+eflops103:25:104 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 3/-1/-1->2->1
+eflops103:28:102 [5] NCCL INFO Trees [0] 6/-1/-1->5->4 [1] 6/-1/-1->5->4
+eflops103:23:99 [0] NCCL INFO Channel 00/02 :    0   1   2   3   4   5   6   7
+eflops103:25:104 [2] NCCL INFO P2P Chunksize set to 131072
+eflops103:24:101 [1] NCCL INFO Trees [0] 2/-1/-1->1->0 [1] 2/-1/-1->1->0
+eflops103:23:99 [0] NCCL INFO Channel 01/02 :    0   1   2   3   4   5   6   7
+eflops103:28:102 [5] NCCL INFO P2P Chunksize set to 131072
+eflops103:23:99 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1
+eflops103:24:101 [1] NCCL INFO P2P Chunksize set to 131072
+eflops103:26:105 [3] NCCL INFO Trees [0] 4/-1/-1->3->2 [1] 4/-1/-1->3->2
+eflops103:23:99 [0] NCCL INFO P2P Chunksize set to 131072
+eflops103:27:100 [4] NCCL INFO Trees [0] 5/-1/-1->4->3 [1] 5/-1/-1->4->3
+eflops103:26:105 [3] NCCL INFO P2P Chunksize set to 131072
+eflops103:27:100 [4] NCCL INFO P2P Chunksize set to 131072
+eflops103:29:106 [6] NCCL INFO Channel 00/0 : 6[6] -> 7[7] via P2P/IPC
+eflops103:25:104 [2] NCCL INFO Channel 00/0 : 2[2] -> 3[3] via P2P/IPC
+eflops103:24:101 [1] NCCL INFO Channel 00/0 : 1[1] -> 2[2] via P2P/IPC
+eflops103:28:102 [5] NCCL INFO Channel 00/0 : 5[5] -> 6[6] via P2P/IPC
+eflops103:30:103 [7] NCCL INFO Channel 00 : 7[7] -> 0[0] via SHM/direct/direct
+eflops103:26:105 [3] NCCL INFO Channel 00 : 3[3] -> 4[4] via SHM/direct/direct
+eflops103:30:103 [7] NCCL INFO Channel 01 : 7[7] -> 0[0] via SHM/direct/direct
+eflops103:24:101 [1] NCCL INFO Channel 01/0 : 1[1] -> 2[2] via P2P/IPC
+eflops103:25:104 [2] NCCL INFO Channel 01/0 : 2[2] -> 3[3] via P2P/IPC
+eflops103:28:102 [5] NCCL INFO Channel 01/0 : 5[5] -> 6[6] via P2P/IPC
+eflops103:29:106 [6] NCCL INFO Channel 01/0 : 6[6] -> 7[7] via P2P/IPC
+eflops103:26:105 [3] NCCL INFO Channel 01 : 3[3] -> 4[4] via SHM/direct/direct
+eflops103:23:99 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[1] via P2P/IPC
+eflops103:27:100 [4] NCCL INFO Channel 00/0 : 4[4] -> 5[5] via P2P/IPC
+eflops103:23:99 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[1] via P2P/IPC
+eflops103:27:100 [4] NCCL INFO Channel 01/0 : 4[4] -> 5[5] via P2P/IPC
+eflops103:29:106 [6] NCCL INFO Connected all rings
+eflops103:25:104 [2] NCCL INFO Connected all rings
+eflops103:25:104 [2] NCCL INFO Channel 00/0 : 2[2] -> 1[1] via P2P/IPC
+eflops103:29:106 [6] NCCL INFO Channel 00/0 : 6[6] -> 5[5] via P2P/IPC
+eflops103:25:104 [2] NCCL INFO Channel 01/0 : 2[2] -> 1[1] via P2P/IPC
+eflops103:29:106 [6] NCCL INFO Channel 01/0 : 6[6] -> 5[5] via P2P/IPC
+eflops103:23:99 [0] NCCL INFO Connected all rings
+eflops103:28:102 [5] NCCL INFO Connected all rings
+eflops103:24:101 [1] NCCL INFO Connected all rings
+eflops103:27:100 [4] NCCL INFO Connected all rings
+eflops103:26:105 [3] NCCL INFO Connected all rings
+eflops103:30:103 [7] NCCL INFO Connected all rings
+eflops103:30:103 [7] NCCL INFO Channel 00/0 : 7[7] -> 6[6] via P2P/IPC
+eflops103:28:102 [5] NCCL INFO Channel 00/0 : 5[5] -> 4[4] via P2P/IPC
+eflops103:27:100 [4] NCCL INFO Channel 00 : 4[4] -> 3[3] via SHM/direct/direct
+eflops103:30:103 [7] NCCL INFO Channel 01/0 : 7[7] -> 6[6] via P2P/IPC
+eflops103:28:102 [5] NCCL INFO Channel 01/0 : 5[5] -> 4[4] via P2P/IPC
+eflops103:27:100 [4] NCCL INFO Channel 01 : 4[4] -> 3[3] via SHM/direct/direct
+eflops103:24:101 [1] NCCL INFO Channel 00/0 : 1[1] -> 0[0] via P2P/IPC
+eflops103:30:103 [7] NCCL INFO Connected all trees
+eflops103:30:103 [7] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+eflops103:30:103 [7] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+eflops103:28:102 [5] NCCL INFO Connected all trees
+eflops103:28:102 [5] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+eflops103:28:102 [5] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+eflops103:29:106 [6] NCCL INFO Connected all trees
+eflops103:29:106 [6] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+eflops103:29:106 [6] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+eflops103:24:101 [1] NCCL INFO Channel 01/0 : 1[1] -> 0[0] via P2P/IPC
+eflops103:23:99 [0] NCCL INFO Connected all trees
+eflops103:23:99 [0] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+eflops103:23:99 [0] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+eflops103:24:101 [1] NCCL INFO Connected all trees
+eflops103:24:101 [1] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+eflops103:24:101 [1] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+eflops103:26:105 [3] NCCL INFO Channel 00/0 : 3[3] -> 2[2] via P2P/IPC
+eflops103:26:105 [3] NCCL INFO Channel 01/0 : 3[3] -> 2[2] via P2P/IPC
+eflops103:25:104 [2] NCCL INFO Connected all trees
+eflops103:25:104 [2] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+eflops103:25:104 [2] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+eflops103:26:105 [3] NCCL INFO Connected all trees
+eflops103:26:105 [3] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+eflops103:26:105 [3] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+eflops103:27:100 [4] NCCL INFO Connected all trees
+eflops103:27:100 [4] NCCL INFO threadThresholds 8/8/64 | 64/8/64 | 512 | 512
+eflops103:27:100 [4] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+eflops103:30:103 [7] NCCL INFO comm 0x11c31f20 rank 7 nranks 8 cudaDev 7 nvmlDev 7 busId a4000 commId 0x2225ac6fa87a1ddb - Init COMPLETE
+eflops103:27:100 [4] NCCL INFO comm 0x11391750 rank 4 nranks 8 cudaDev 4 nvmlDev 4 busId 9c000 commId 0x2225ac6fa87a1ddb - Init COMPLETE
+eflops103:28:102 [5] NCCL INFO comm 0x111e7dc0 rank 5 nranks 8 cudaDev 5 nvmlDev 5 busId 9d000 commId 0x2225ac6fa87a1ddb - Init COMPLETE
+eflops103:23:99 [0] NCCL INFO comm 0x11405e60 rank 0 nranks 8 cudaDev 0 nvmlDev 0 busId 4f000 commId 0x2225ac6fa87a1ddb - Init COMPLETE
+eflops103:24:101 [1] NCCL INFO comm 0x10d78780 rank 1 nranks 8 cudaDev 1 nvmlDev 1 busId 50000 commId 0x2225ac6fa87a1ddb - Init COMPLETE
+eflops103:26:105 [3] NCCL INFO comm 0x11c03220 rank 3 nranks 8 cudaDev 3 nvmlDev 3 busId 57000 commId 0x2225ac6fa87a1ddb - Init COMPLETE
+eflops103:25:104 [2] NCCL INFO comm 0x11734fb0 rank 2 nranks 8 cudaDev 2 nvmlDev 2 busId 53000 commId 0x2225ac6fa87a1ddb - Init COMPLETE
+eflops103:29:106 [6] NCCL INFO comm 0x114cdf40 rank 6 nranks 8 cudaDev 6 nvmlDev 6 busId a0000 commId 0x2225ac6fa87a1ddb - Init COMPLETE
+2025-09-04 19:48:10,835   INFO  GT database has been saved to shared memory
+2025-09-04 19:48:11,125   INFO  Loading NuScenes dataset
+2025-09-04 19:48:12,901   INFO  Total samples for NuScenes dataset: 28130
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3526.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+epochs:   0%|          | 0/36 [00:00<?, ?it/s]epochs:   0%|          | 0/36 [00:00<?, ?it/s]epochs:   0%|          | 0/36 [00:00<?, ?it/s]epochs:   0%|          | 0/36 [00:00<?, ?it/s]epochs:   0%|          | 0/36 [00:00<?, ?it/s]epochs:   0%|          | 0/36 [00:00<?, ?it/s]epochs:   0%|          | 0/36 [00:00<?, ?it/s]2025-09-04 19:48:13,357   INFO  ----------- Model TransFusion created, param count: 24443458 -----------
+2025-09-04 19:48:13,357   INFO  DistributedDataParallel(
+  (module): TransFusion(
+    (vfe): DynamicVoxelVFE(
+      (pfn_layers): ModuleList(
+        (0): PFNLayerV2(
+          (linear): Linear(in_features=11, out_features=32, bias=False)
+          (norm): SyncBatchNorm(32, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+          (relu): ReLU()
+        )
+        (1): PFNLayerV2(
+          (linear): Linear(in_features=64, out_features=64, bias=False)
+          (norm): SyncBatchNorm(64, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+          (relu): ReLU()
+        )
+      )
+    )
+    (backbone_3d): FSHNet_nusc(
+      (cpe): SparseSequential(
+        (0): SparseSequential(
+          (0): SubMConv3d(64, 128, kernel_size=[3, 3, 3], stride=[1, 1, 1], padding=[0, 0, 0], dilation=[1, 1, 1], output_padding=[0, 0, 0], bias=False, algo=ConvAlgo.MaskImplicitGemm)
+          (1): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+          (2): ReLU()
+        )
+        (1): SparseBasicBlock(
+          (conv1): SubMConv3d(128, 128, kernel_size=[3, 3, 3], stride=[1, 1, 1], padding=[1, 1, 1], dilation=[1, 1, 1], output_padding=[0, 0, 0], algo=ConvAlgo.MaskImplicitGemm)
+          (bn1): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): SubMConv3d(128, 128, kernel_size=[3, 3, 3], stride=[1, 1, 1], padding=[1, 1, 1], dilation=[1, 1, 1], output_padding=[0, 0, 0], algo=ConvAlgo.MaskImplicitGemm)
+          (bn2): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        )
+        (2): SparseBasicBlock(
+          (conv1): SubMConv3d(128, 128, kernel_size=[3, 3, 3], stride=[1, 1, 1], padding=[1, 1, 1], dilation=[1, 1, 1], output_padding=[0, 0, 0], algo=ConvAlgo.MaskImplicitGemm)
+          (bn1): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): SubMConv3d(128, 128, kernel_size=[3, 3, 3], stride=[1, 1, 1], padding=[1, 1, 1], dilation=[1, 1, 1], output_padding=[0, 0, 0], algo=ConvAlgo.MaskImplicitGemm)
+          (bn2): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        )
+        (3): SparseBasicBlock(
+          (conv1): SubMConv3d(128, 128, kernel_size=[3, 3, 3], stride=[1, 1, 1], padding=[1, 1, 1], dilation=[1, 1, 1], output_padding=[0, 0, 0], algo=ConvAlgo.MaskImplicitGemm)
+          (bn1): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): SubMConv3d(128, 128, kernel_size=[3, 3, 3], stride=[1, 1, 1], padding=[1, 1, 1], dilation=[1, 1, 1], output_padding=[0, 0, 0], algo=ConvAlgo.MaskImplicitGemm)
+          (bn2): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        )
+        (4): SparseSequential(
+          (0): SparseConv3d(128, 128, kernel_size=[3, 1, 1], stride=[2, 1, 1], padding=[0, 0, 0], dilation=[1, 1, 1], output_padding=[0, 0, 0], bias=False, algo=ConvAlgo.MaskImplicitGemm)
+          (1): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+          (2): ReLU()
+        )
+      )
+      (down1): SparseSequential(
+        (0): SparseSequential(
+          (0): SparseConv3d(128, 128, kernel_size=[3, 3, 3], stride=[2, 2, 2], padding=[1, 1, 1], dilation=[1, 1, 1], output_padding=[0, 0, 0], bias=False, algo=ConvAlgo.MaskImplicitGemm)
+          (1): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+          (2): ReLU()
+        )
+        (1): SparseBasicBlock(
+          (conv1): SubMConv3d(128, 128, kernel_size=[3, 3, 3], stride=[1, 1, 1], padding=[1, 1, 1], dilation=[1, 1, 1], output_padding=[0, 0, 0], algo=ConvAlgo.MaskImplicitGemm)
+          (bn1): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): SubMConv3d(128, 128, kernel_size=[3, 3, 3], stride=[1, 1, 1], padding=[1, 1, 1], dilation=[1, 1, 1], output_padding=[0, 0, 0], algo=ConvAlgo.MaskImplicitGemm)
+          (bn2): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        )
+      )
+      (down2): SparseSequential(
+        (0): SparseSequential(
+          (0): SparseConv3d(128, 128, kernel_size=[3, 3, 3], stride=[2, 2, 2], padding=[1, 1, 1], dilation=[1, 1, 1], output_padding=[0, 0, 0], bias=False, algo=ConvAlgo.MaskImplicitGemm)
+          (1): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+          (2): ReLU()
+        )
+        (1): SparseBasicBlock(
+          (conv1): SubMConv3d(128, 128, kernel_size=[3, 3, 3], stride=[1, 1, 1], padding=[1, 1, 1], dilation=[1, 1, 1], output_padding=[0, 0, 0], algo=ConvAlgo.MaskImplicitGemm)
+          (bn1): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): SubMConv3d(128, 128, kernel_size=[3, 3, 3], stride=[1, 1, 1], padding=[1, 1, 1], dilation=[1, 1, 1], output_padding=[0, 0, 0], algo=ConvAlgo.MaskImplicitGemm)
+          (bn2): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        )
+      )
+      (down3): SparseSequential(
+        (0): SparseSequential(
+          (0): SparseConv3d(128, 128, kernel_size=[3, 3, 3], stride=[2, 2, 2], padding=[1, 1, 1], dilation=[1, 1, 1], output_padding=[0, 0, 0], bias=False, algo=ConvAlgo.MaskImplicitGemm)
+          (1): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+          (2): ReLU()
+        )
+        (1): SparseBasicBlock(
+          (conv1): SubMConv3d(128, 128, kernel_size=[3, 3, 3], stride=[1, 1, 1], padding=[1, 1, 1], dilation=[1, 1, 1], output_padding=[0, 0, 0], algo=ConvAlgo.MaskImplicitGemm)
+          (bn1): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+          (relu): ReLU()
+          (conv2): SubMConv3d(128, 128, kernel_size=[3, 3, 3], stride=[1, 1, 1], padding=[1, 1, 1], dilation=[1, 1, 1], output_padding=[0, 0, 0], algo=ConvAlgo.MaskImplicitGemm)
+          (bn2): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        )
+      )
+      (stage): SPEncoder(
+        (blocks): ModuleList(
+          (0-2): 3 x SMSA(
+            (forward_blocks): ModuleList(
+              (0-1): 2 x Block(
+                (mixer): Mamba(
+                  (in_proj): Linear(in_features=128, out_features=512, bias=False)
+                  (conv1d): Conv1d(256, 256, kernel_size=(4,), stride=(1,), padding=(3,), groups=256)
+                  (act): SiLU()
+                  (x_proj): Linear(in_features=256, out_features=40, bias=False)
+                  (dt_proj): Linear(in_features=8, out_features=256, bias=True)
+                  (out_proj): Linear(in_features=256, out_features=128, bias=False)
+                )
+                (norm): RMSNorm()
+              )
+            )
+            (backward_blocks): ModuleList(
+              (0-1): 2 x Block(
+                (mixer): Mamba(
+                  (in_proj): Linear(in_features=128, out_features=512, bias=False)
+                  (conv1d): Conv1d(256, 256, kernel_size=(4,), stride=(1,), padding=(3,), groups=256)
+                  (act): SiLU()
+                  (x_proj): Linear(in_features=256, out_features=40, bias=False)
+                  (dt_proj): Linear(in_features=8, out_features=256, bias=True)
+                  (out_proj): Linear(in_features=256, out_features=128, bias=False)
+                )
+                (norm): RMSNorm()
+              )
+            )
+            (forward_norms): ModuleList(
+              (0-1): 2 x LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+            )
+            (backward_norms): ModuleList(
+              (0-1): 2 x LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+            )
+            (output_norms): ModuleList(
+              (0-1): 2 x LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+            )
+            (drop_path): DropPath(drop_prob=0.200)
+            (locals): ModuleList(
+              (0-2): 3 x ResidualSparseBasicBlock(
+                (conv1): SubMConv3d(128, 128, kernel_size=[3, 3, 3], stride=[1, 1, 1], padding=[1, 1, 1], dilation=[1, 1, 1], output_padding=[0, 0, 0], algo=ConvAlgo.MaskImplicitGemm)
+                (bn1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+                (act): GELU(approximate='none')
+              )
+            )
+          )
+        )
+        (inputs): ModuleList(
+          (0): SerializationLayer(
+            (serialization): ZOrderSerialization()
+          )
+          (1): SerializationLayer(
+            (serialization): HilbertSerialization()
+          )
+          (2): SerializationLayer(
+            (serialization): FlattenWindowsSerialization()
+          )
+        )
+        (embeddings): ModuleList(
+          (0-2): 3 x MSSubConvEmbeddingLearned(
+            (stem): ModuleList(
+              (0-2): 3 x SparseBasicBlock(
+                (conv1): SubMConv3d(3, 128, kernel_size=[3, 3, 3], stride=[1, 1, 1], padding=[1, 1, 1], dilation=[1, 1, 1], output_padding=[0, 0, 0], algo=ConvAlgo.MaskImplicitGemm)
+                (bn1): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+                (relu): ReLU(inplace=True)
+                (conv2): SubMConv3d(128, 128, kernel_size=[3, 3, 3], stride=[1, 1, 1], padding=[1, 1, 1], dilation=[1, 1, 1], output_padding=[0, 0, 0], algo=ConvAlgo.MaskImplicitGemm)
+              )
+            )
+          )
+        )
+      )
+      (app): AttnPillarPool(
+        (query_func): SparseMaxPool3d(kernel_size=[10, 1, 1], stride=[10, 1, 1], padding=[0, 0, 0], dilation=[1, 1, 1], algo=ConvAlgo.MaskImplicitGemm)
+        (norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (self_attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)
+        )
+        (pos_embedding): Embedding(10, 128)
+      )
+      (cls_conv): SparseSequential(
+        (0): SubMConv2d(128, 128, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], dilation=[1, 1], output_padding=[0, 0], bias=False, algo=ConvAlgo.MaskImplicitGemm)
+        (1): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+        (2): ReLU()
+        (3): SubMConv2d(128, 3, kernel_size=[1, 1], stride=[1, 1], padding=[0, 0], dilation=[1, 1], output_padding=[0, 0], algo=ConvAlgo.MaskImplicitGemm)
+      )
+      (afd_layers): ModuleList(
+        (0-3): 4 x SEDLayer(
+          (encoder): ModuleList(
+            (0): SparseSequential(
+              (0): SparseBasicBlock2D(
+                (conv1): SubMConv2d(128, 128, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], dilation=[1, 1], output_padding=[0, 0], algo=ConvAlgo.MaskImplicitGemm)
+                (bn1): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+                (conv2): SubMConv2d(128, 128, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], dilation=[1, 1], output_padding=[0, 0], algo=ConvAlgo.MaskImplicitGemm)
+                (bn2): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+                (relu): ReLU()
+              )
+              (1): SparseBasicBlock2D(
+                (conv1): SubMConv2d(128, 128, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], dilation=[1, 1], output_padding=[0, 0], algo=ConvAlgo.MaskImplicitGemm)
+                (bn1): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+                (conv2): SubMConv2d(128, 128, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], dilation=[1, 1], output_padding=[0, 0], algo=ConvAlgo.MaskImplicitGemm)
+                (bn2): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+                (relu): ReLU()
+              )
+            )
+            (1-2): 2 x SparseSequential(
+              (0): SparseSequential(
+                (0): SparseConv2d(128, 128, kernel_size=[3, 3], stride=[2, 2], padding=[1, 1], dilation=[1, 1], output_padding=[0, 0], bias=False, algo=ConvAlgo.MaskImplicitGemm)
+                (1): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+                (2): ReLU()
+              )
+              (1): SparseBasicBlock2D(
+                (conv1): SubMConv2d(128, 128, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], dilation=[1, 1], output_padding=[0, 0], bias=False, algo=ConvAlgo.MaskImplicitGemm)
+                (bn1): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+                (conv2): SubMConv2d(128, 128, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], dilation=[1, 1], output_padding=[0, 0], bias=False, algo=ConvAlgo.MaskImplicitGemm)
+                (bn2): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+                (relu): ReLU()
+              )
+            )
+          )
+          (decoder): ModuleList(
+            (0-1): 2 x SparseSequential(
+              (0): SparseInverseConv2d(128, 128, kernel_size=[3, 3], stride=[1, 1], padding=[0, 0], dilation=[1, 1], output_padding=[0, 0], bias=False, algo=ConvAlgo.MaskImplicitGemm)
+              (1): SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+              (2): ReLU()
+            )
+          )
+          (decoder_norm): ModuleList(
+            (0-1): 2 x SyncBatchNorm(128, eps=0.001, momentum=0.01, affine=True, track_running_stats=True)
+          )
+        )
+      )
+      (shared_conv): SparseSequential(
+        (0): SubMConv2d(128, 128, kernel_size=[3, 3], stride=[1, 1], padding=[1, 1], dilation=[1, 1], output_padding=[0, 0], bias=False, algo=ConvAlgo.MaskImplicitGemm)
+        (1): SyncBatchNorm(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (2): ReLU()
+      )
+    )
+    (map_to_bev_module): None
+    (pfe): None
+    (backbone_2d): None
+    (dense_head): TransFusionHead(
+      (loss_cls): SigmoidFocalClassificationLoss()
+      (loss_bbox): L1Loss()
+      (loss_heatmap): GaussianFocalLoss()
+      (shared_conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (heatmap_head): Sequential(
+        (0): BasicBlock2D(
+          (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (bn): SyncBatchNorm(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+        )
+        (1): Conv2d(128, 10, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (class_encoding): Conv1d(10, 128, kernel_size=(1,), stride=(1,))
+      (decoder): TransformerDecoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)
+        )
+        (multihead_attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)
+        )
+        (linear1): Linear(in_features=128, out_features=256, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (linear2): Linear(in_features=256, out_features=128, bias=True)
+        (norm1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (norm2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (norm3): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (dropout1): Dropout(p=0.1, inplace=False)
+        (dropout2): Dropout(p=0.1, inplace=False)
+        (dropout3): Dropout(p=0.1, inplace=False)
+        (self_posembed): PositionEmbeddingLearned(
+          (position_embedding_head): Sequential(
+            (0): Conv1d(2, 128, kernel_size=(1,), stride=(1,))
+            (1): SyncBatchNorm(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU(inplace=True)
+            (3): Conv1d(128, 128, kernel_size=(1,), stride=(1,))
+          )
+        )
+        (cross_posembed): PositionEmbeddingLearned(
+          (position_embedding_head): Sequential(
+            (0): Conv1d(2, 128, kernel_size=(1,), stride=(1,))
+            (1): SyncBatchNorm(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU(inplace=True)
+            (3): Conv1d(128, 128, kernel_size=(1,), stride=(1,))
+          )
+        )
+      )
+      (prediction_head): SeparateHead_Transfusion(
+        (center): Sequential(
+          (0): Sequential(
+            (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+            (1): SyncBatchNorm(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+          )
+          (1): Conv1d(64, 2, kernel_size=(1,), stride=(1,))
+        )
+        (height): Sequential(
+          (0): Sequential(
+            (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+            (1): SyncBatchNorm(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+          )
+          (1): Conv1d(64, 1, kernel_size=(1,), stride=(1,))
+        )
+        (dim): Sequential(
+          (0): Sequential(
+            (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+            (1): SyncBatchNorm(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+          )
+          (1): Conv1d(64, 3, kernel_size=(1,), stride=(1,))
+        )
+        (rot): Sequential(
+          (0): Sequential(
+            (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+            (1): SyncBatchNorm(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+          )
+          (1): Conv1d(64, 2, kernel_size=(1,), stride=(1,))
+        )
+        (vel): Sequential(
+          (0): Sequential(
+            (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+            (1): SyncBatchNorm(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+          )
+          (1): Conv1d(64, 2, kernel_size=(1,), stride=(1,))
+        )
+        (iou): Sequential(
+          (0): Sequential(
+            (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+            (1): SyncBatchNorm(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+          )
+          (1): Conv1d(64, 1, kernel_size=(1,), stride=(1,))
+        )
+        (heatmap): Sequential(
+          (0): Sequential(
+            (0): Conv1d(128, 64, kernel_size=(1,), stride=(1,))
+            (1): SyncBatchNorm(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU()
+          )
+          (1): Conv1d(64, 10, kernel_size=(1,), stride=(1,))
+        )
+      )
+    )
+    (point_head): None
+    (roi_head): None
+  )
+)
+2025-09-04 19:48:13,366   INFO  **********************Start training sparse_models/sparse_former_base(default)**********************
+epochs:   0%|          | 0/36 [00:00<?, ?it/s]
+train:   0%|          | 0/1759 [00:00<?, ?it/s][A/mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/tools/../pcdet/ops/iou3d_nms/iou3d_nms_utils.py:102: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:83.)
+  overlaps_bev = torch.cuda.FloatTensor(torch.Size((boxes_a.shape[0], 1))).zero_()  # (N, M)
+/mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/tools/../pcdet/ops/iou3d_nms/iou3d_nms_utils.py:102: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:83.)
+  overlaps_bev = torch.cuda.FloatTensor(torch.Size((boxes_a.shape[0], 1))).zero_()  # (N, M)
+/mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/tools/../pcdet/ops/iou3d_nms/iou3d_nms_utils.py:102: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:83.)
+  overlaps_bev = torch.cuda.FloatTensor(torch.Size((boxes_a.shape[0], 1))).zero_()  # (N, M)
+/mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/tools/../pcdet/ops/iou3d_nms/iou3d_nms_utils.py:102: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:83.)
+  overlaps_bev = torch.cuda.FloatTensor(torch.Size((boxes_a.shape[0], 1))).zero_()  # (N, M)
+/mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/tools/../pcdet/ops/iou3d_nms/iou3d_nms_utils.py:102: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:83.)
+  overlaps_bev = torch.cuda.FloatTensor(torch.Size((boxes_a.shape[0], 1))).zero_()  # (N, M)
+/mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/tools/../pcdet/ops/iou3d_nms/iou3d_nms_utils.py:102: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:83.)
+  overlaps_bev = torch.cuda.FloatTensor(torch.Size((boxes_a.shape[0], 1))).zero_()  # (N, M)
+/mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/tools/../pcdet/ops/iou3d_nms/iou3d_nms_utils.py:102: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:83.)
+  overlaps_bev = torch.cuda.FloatTensor(torch.Size((boxes_a.shape[0], 1))).zero_()  # (N, M)
+/mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/tools/../pcdet/ops/iou3d_nms/iou3d_nms_utils.py:102: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:83.)
+  overlaps_bev = torch.cuda.FloatTensor(torch.Size((boxes_a.shape[0], 1))).zero_()  # (N, M)
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/torch/autograd/__init__.py:251: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [128, 128, 1], strides() = [128, 1, 128]
+bucket_view.sizes() = [128, 128, 1], strides() = [128, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:320.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/torch/autograd/__init__.py:251: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [128, 128, 1], strides() = [128, 1, 128]
+bucket_view.sizes() = [128, 128, 1], strides() = [128, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:320.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/torch/autograd/__init__.py:251: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [128, 128, 1], strides() = [128, 1, 128]
+bucket_view.sizes() = [128, 128, 1], strides() = [128, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:320.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/torch/autograd/__init__.py:251: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [128, 128, 1], strides() = [128, 1, 128]
+bucket_view.sizes() = [128, 128, 1], strides() = [128, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:320.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/torch/autograd/__init__.py:251: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [128, 128, 1], strides() = [128, 1, 128]
+bucket_view.sizes() = [128, 128, 1], strides() = [128, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:320.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/torch/autograd/__init__.py:251: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [128, 128, 1], strides() = [128, 1, 128]
+bucket_view.sizes() = [128, 128, 1], strides() = [128, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:320.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/torch/autograd/__init__.py:251: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [128, 128, 1], strides() = [128, 1, 128]
+bucket_view.sizes() = [128, 128, 1], strides() = [128, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:320.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/root/miniconda3/envs/sparseformerv2/lib/python3.8/site-packages/torch/autograd/__init__.py:251: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [128, 128, 1], strides() = [128, 1, 128]
+bucket_view.sizes() = [128, 128, 1], strides() = [128, 1, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:320.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/tools/../pcdet/utils/commu_utils.py:66: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = torch.ByteStorage.from_buffer(buffer)
+/mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/tools/../pcdet/utils/commu_utils.py:66: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = torch.ByteStorage.from_buffer(buffer)
+/mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/tools/../pcdet/utils/commu_utils.py:66: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = torch.ByteStorage.from_buffer(buffer)
+/mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/tools/../pcdet/utils/commu_utils.py:66: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = torch.ByteStorage.from_buffer(buffer)
+/mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/tools/../pcdet/utils/commu_utils.py:66: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = torch.ByteStorage.from_buffer(buffer)
+/mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/tools/../pcdet/utils/commu_utils.py:66: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = torch.ByteStorage.from_buffer(buffer)
+/mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/tools/../pcdet/utils/commu_utils.py:66: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = torch.ByteStorage.from_buffer(buffer)
+/mnt/csi-data-aly/user/hongfeizhang/mypaper/SparseFormerV2/tools/../pcdet/utils/commu_utils.py:66: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  storage = torch.ByteStorage.from_buffer(buffer)
+2025-09-04 19:48:36,158   INFO  Train:    1/36 (  3%) [   0/1759 (  0%)]  Loss: 1447. (1.45e+03)  LR: 3.000e-04  Grad: 10.0000  max=0.2903(module.dense_head.heatmap_head.1.bias)  min: -0.0804(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1409.3995, loss_cls=20.9680, loss_bbox=9.2674, matched_ious=0.0033, loss_iou=0.4407, loss_iou_reg=0.0000, d_time=2.29(2.29), f_time=18.35(18.35), b_time=20.64(20.64)  Time cost: 00:20/10:00:34 [00:22/360:20:52]  Acc_iter 1           Data time: 2.29(2.29)  Forward time: 18.35(18.35)  Batch time: 20.64(20.64)
+2025-09-04 19:49:39,682   INFO  Train:    1/36 (  3%) [  49/1759 (  3%)]  Loss: 17.63 (129.)  LR: 3.000e-04  Grad: 10.0000  max=1.4121(module.dense_head.prediction_head.heatmap.1.bias)  min: -0.3235(module.dense_head.prediction_head.heatmap.0.1.bias)  NaN: False  loss_hm=74.7375, loss_cls=13.4833, loss_bbox=7.9207, matched_ious=0.0113, loss_iou=0.2727, loss_iou_reg=0.3251, d_time=0.00(0.05), f_time=1.23(1.63), b_time=1.23(1.68)  Time cost: 01:24/47:53 [01:26/29:31:53]  Acc_iter 50          Data time: 0.00(0.05)  Forward time: 1.23(1.63)  Batch time: 1.23(1.68)
+2025-09-04 19:50:46,176   INFO  Train:    1/36 (  3%) [  99/1759 (  6%)]  Loss: 13.77 (73.3)  LR: 3.001e-04  Grad: 9.1513  max=1.1733(module.dense_head.prediction_head.heatmap.1.bias)  min: -0.2823(module.dense_head.prediction_head.heatmap.0.1.bias)  NaN: False  loss_hm=2.8587, loss_cls=5.5916, loss_bbox=4.7733, matched_ious=0.0552, loss_iou=0.1215, loss_iou_reg=0.4232, d_time=0.00(0.03), f_time=1.26(1.48), b_time=1.26(1.51)  Time cost: 02:30/41:38 [02:32/26:25:56]  Acc_iter 100         Data time: 0.00(0.03)  Forward time: 1.26(1.48)  Batch time: 1.26(1.51)
+2025-09-04 19:51:49,156   INFO  Train:    1/36 (  3%) [ 149/1759 (  8%)]  Loss: 11.32 (52.8)  LR: 3.002e-04  Grad: 7.7335  max=0.4736(module.dense_head.prediction_head.heatmap.1.bias)  min: -0.1658(module.dense_head.decoder.self_attn.in_proj_weight)  NaN: False  loss_hm=2.5665, loss_cls=1.8632, loss_bbox=3.2431, matched_ious=0.1047, loss_iou=0.1162, loss_iou_reg=0.4001, d_time=0.00(0.02), f_time=1.33(1.40), b_time=1.33(1.42)  Time cost: 03:33/38:11 [03:35/24:58:31]  Acc_iter 150         Data time: 0.00(0.02)  Forward time: 1.33(1.40)  Batch time: 1.33(1.42)
+2025-09-04 19:52:53,517   INFO  Train:    1/36 (  3%) [ 199/1759 ( 11%)]  Loss: 10.02 (42.2)  LR: 3.004e-04  Grad: 6.9757  max=0.2095(module.dense_head.decoder.self_attn.in_proj_weight)  min: -0.1766(module.dense_head.decoder.self_attn.in_proj_weight)  NaN: False  loss_hm=2.4108, loss_cls=0.9656, loss_bbox=2.8189, matched_ious=0.1199, loss_iou=0.1078, loss_iou_reg=0.3937, d_time=0.00(0.02), f_time=1.15(1.37), b_time=1.16(1.39)  Time cost: 04:37/36:07 [04:40/24:21:35]  Acc_iter 200         Data time: 0.00(0.02)  Forward time: 1.15(1.37)  Batch time: 1.16(1.39)
+2025-09-04 19:53:56,379   INFO  Train:    1/36 (  3%) [ 249/1759 ( 14%)]  Loss: 9.436 (35.6)  LR: 3.006e-04  Grad: 6.9935  max=0.2215(module.dense_head.decoder.self_attn.in_proj_weight)  min: -0.3925(module.backbone_3d.cls_conv.3.weight)  NaN: False  loss_hm=2.2729, loss_cls=0.7439, loss_bbox=2.5248, matched_ious=0.1471, loss_iou=0.1106, loss_iou_reg=0.3866, d_time=0.01(0.02), f_time=1.25(1.35), b_time=1.26(1.36)  Time cost: 05:40/34:17 [05:42/23:52:40]  Acc_iter 250         Data time: 0.01(0.02)  Forward time: 1.25(1.35)  Batch time: 1.26(1.36)
+2025-09-04 19:55:02,566   INFO  Train:    1/36 (  3%) [ 299/1759 ( 17%)]  Loss: 8.465 (31.1)  LR: 3.009e-04  Grad: 6.9233  max=0.1934(module.dense_head.decoder.self_attn.in_proj_weight)  min: -0.2227(module.backbone_3d.cls_conv.3.weight)  NaN: False  loss_hm=2.1177, loss_cls=0.6321, loss_bbox=2.2860, matched_ious=0.1766, loss_iou=0.1103, loss_iou_reg=0.3702, d_time=0.00(0.02), f_time=1.34(1.34), b_time=1.35(1.36)  Time cost: 06:46/33:00 [06:49/23:44:41]  Acc_iter 300         Data time: 0.00(0.02)  Forward time: 1.34(1.34)  Batch time: 1.35(1.36)
+2025-09-04 19:56:06,821   INFO  Train:    1/36 (  3%) [ 349/1759 ( 20%)]  Loss: 8.225 (27.9)  LR: 3.013e-04  Grad: 7.3381  max=0.1988(module.backbone_3d.cls_conv.3.weight)  min: -0.3065(module.backbone_3d.cls_conv.3.weight)  NaN: False  loss_hm=2.0377, loss_cls=0.5929, loss_bbox=2.0601, matched_ious=0.2007, loss_iou=0.1109, loss_iou_reg=0.3602, d_time=0.00(0.02), f_time=1.18(1.33), b_time=1.18(1.35)  Time cost: 07:51/31:38 [07:53/23:32:53]  Acc_iter 350         Data time: 0.00(0.02)  Forward time: 1.18(1.33)  Batch time: 1.18(1.35)
+2025-09-04 19:57:10,586   INFO  Train:    1/36 (  3%) [ 399/1759 ( 23%)]  Loss: 7.737 (25.4)  LR: 3.017e-04  Grad: 7.4497  max=0.2115(module.dense_head.decoder.self_attn.in_proj_weight)  min: -0.2298(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.9647, loss_cls=0.5507, loss_bbox=2.0121, matched_ious=0.2129, loss_iou=0.1111, loss_iou_reg=0.3542, d_time=0.00(0.02), f_time=1.18(1.32), b_time=1.18(1.34)  Time cost: 08:54/30:18 [08:57/23:22:28]  Acc_iter 400         Data time: 0.00(0.02)  Forward time: 1.18(1.32)  Batch time: 1.18(1.34)
+2025-09-04 19:58:13,523   INFO  Train:    1/36 (  3%) [ 449/1759 ( 26%)]  Loss: 7.383 (23.4)  LR: 3.021e-04  Grad: 8.2550  max=0.3058(module.backbone_3d.cls_conv.3.bias)  min: -0.4001(module.backbone_3d.cls_conv.3.weight)  NaN: False  loss_hm=1.8547, loss_cls=0.5336, loss_bbox=1.8466, matched_ious=0.2370, loss_iou=0.1096, loss_iou_reg=0.3467, d_time=0.00(0.01), f_time=1.27(1.31), b_time=1.27(1.33)  Time cost: 09:57/29:00 [10:00/23:12:13]  Acc_iter 450         Data time: 0.00(0.01)  Forward time: 1.27(1.31)  Batch time: 1.27(1.33)
+2025-09-04 19:59:17,046   INFO  Train:    1/36 (  3%) [ 499/1759 ( 28%)]  Loss: 7.637 (21.8)  LR: 3.026e-04  Grad: 8.4643  max=0.2486(module.backbone_3d.cls_conv.3.bias)  min: -0.2467(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.7551, loss_cls=0.5035, loss_bbox=1.7273, matched_ious=0.2625, loss_iou=0.1089, loss_iou_reg=0.3346, d_time=0.00(0.01), f_time=1.32(1.31), b_time=1.32(1.32)  Time cost: 11:01/27:46 [11:03/23:05:01]  Acc_iter 500         Data time: 0.00(0.01)  Forward time: 1.32(1.31)  Batch time: 1.32(1.32)
+2025-09-04 20:00:23,299   INFO  Train:    1/36 (  3%) [ 549/1759 ( 31%)]  Loss: 6.436 (20.5)  LR: 3.031e-04  Grad: 8.5658  max=0.2527(module.dense_head.decoder.self_attn.in_proj_weight)  min: -0.2528(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.7046, loss_cls=0.4807, loss_bbox=1.7363, matched_ious=0.2742, loss_iou=0.1109, loss_iou_reg=0.3286, d_time=0.01(0.01), f_time=1.21(1.31), b_time=1.21(1.32)  Time cost: 12:07/26:40 [12:09/23:04:08]  Acc_iter 550         Data time: 0.01(0.01)  Forward time: 1.21(1.31)  Batch time: 1.21(1.32)
+2025-09-04 20:01:26,255   INFO  Train:    1/36 (  3%) [ 599/1759 ( 34%)]  Loss: 6.718 (19.4)  LR: 3.037e-04  Grad: 8.8880  max=0.2410(module.dense_head.decoder.self_attn.in_proj_weight)  min: -0.2588(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.6646, loss_cls=0.4538, loss_bbox=1.6995, matched_ious=0.2804, loss_iou=0.1096, loss_iou_reg=0.3211, d_time=0.00(0.01), f_time=1.24(1.31), b_time=1.25(1.32)  Time cost: 13:10/25:28 [13:12/22:57:29]  Acc_iter 600         Data time: 0.00(0.01)  Forward time: 1.24(1.31)  Batch time: 1.25(1.32)
+2025-09-04 20:02:28,927   INFO  Train:    1/36 (  3%) [ 649/1759 ( 37%)]  Loss: 7.044 (18.5)  LR: 3.044e-04  Grad: 9.1536  max=0.2371(module.dense_head.decoder.self_attn.in_proj_weight)  min: -0.2646(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.6231, loss_cls=0.4368, loss_bbox=1.7352, matched_ious=0.2922, loss_iou=0.1112, loss_iou_reg=0.3118, d_time=0.00(0.01), f_time=1.26(1.30), b_time=1.27(1.31)  Time cost: 14:13/24:17 [14:15/22:51:13]  Acc_iter 650         Data time: 0.00(0.01)  Forward time: 1.26(1.30)  Batch time: 1.27(1.31)
+2025-09-04 20:03:31,989   INFO  Train:    1/36 (  3%) [ 699/1759 ( 40%)]  Loss: 8.575 (17.6)  LR: 3.051e-04  Grad: 9.5641  max=0.4007(module.backbone_3d.cls_conv.3.weight)  min: -0.2526(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.6278, loss_cls=0.4319, loss_bbox=1.7314, matched_ious=0.2986, loss_iou=0.1143, loss_iou_reg=0.3096, d_time=0.00(0.01), f_time=1.26(1.30), b_time=1.27(1.31)  Time cost: 15:16/23:07 [15:18/22:46:17]  Acc_iter 700         Data time: 0.00(0.01)  Forward time: 1.26(1.30)  Batch time: 1.27(1.31)
+2025-09-04 20:04:36,060   INFO  Train:    1/36 (  3%) [ 749/1759 ( 43%)]  Loss: 8.576 (16.9)  LR: 3.058e-04  Grad: 9.7467  max=0.8047(module.backbone_3d.cls_conv.3.weight)  min: -0.2454(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.5784, loss_cls=0.4190, loss_bbox=1.6960, matched_ious=0.3087, loss_iou=0.1103, loss_iou_reg=0.3079, d_time=0.00(0.01), f_time=1.24(1.30), b_time=1.25(1.31)  Time cost: 16:20/22:00 [16:22/22:43:17]  Acc_iter 750         Data time: 0.00(0.01)  Forward time: 1.24(1.30)  Batch time: 1.25(1.31)
+2025-09-04 20:05:40,214   INFO  Train:    1/36 (  3%) [ 799/1759 ( 45%)]  Loss: 5.967 (16.3)  LR: 3.066e-04  Grad: 9.3759  max=0.2263(module.dense_head.decoder.multihead_attn.in_proj_weight)  min: -0.2509(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.5404, loss_cls=0.3963, loss_bbox=1.7445, matched_ious=0.3031, loss_iou=0.1108, loss_iou_reg=0.3091, d_time=0.00(0.01), f_time=1.29(1.30), b_time=1.29(1.31)  Time cost: 17:24/20:53 [17:26/22:40:37]  Acc_iter 800         Data time: 0.00(0.01)  Forward time: 1.29(1.30)  Batch time: 1.29(1.31)
+2025-09-04 20:06:43,706   INFO  Train:    1/36 (  3%) [ 849/1759 ( 48%)]  Loss: 7.580 (15.8)  LR: 3.075e-04  Grad: 9.6870  max=0.2250(module.dense_head.heatmap_head.1.weight)  min: -0.2569(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.5394, loss_cls=0.4012, loss_bbox=1.6602, matched_ious=0.3164, loss_iou=0.1139, loss_iou_reg=0.3038, d_time=0.00(0.01), f_time=1.36(1.29), b_time=1.37(1.30)  Time cost: 18:28/19:46 [18:30/22:37:20]  Acc_iter 850         Data time: 0.00(0.01)  Forward time: 1.36(1.29)  Batch time: 1.37(1.30)
+2025-09-04 20:07:46,959   INFO  Train:    1/36 (  3%) [ 899/1759 ( 51%)]  Loss: 6.652 (15.3)  LR: 3.084e-04  Grad: 9.3236  max=0.2085(module.dense_head.decoder.multihead_attn.in_proj_weight)  min: -0.2501(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.5000, loss_cls=0.3809, loss_bbox=1.6933, matched_ious=0.3154, loss_iou=0.1088, loss_iou_reg=0.3026, d_time=0.00(0.01), f_time=1.25(1.29), b_time=1.25(1.30)  Time cost: 19:31/18:39 [19:33/22:34:01]  Acc_iter 900         Data time: 0.00(0.01)  Forward time: 1.25(1.29)  Batch time: 1.25(1.30)
+2025-09-04 20:08:50,677   INFO  Train:    1/36 (  3%) [ 949/1759 ( 54%)]  Loss: 5.993 (14.8)  LR: 3.093e-04  Grad: 9.6739  max=0.2112(module.backbone_3d.cls_conv.3.weight)  min: -0.2497(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.4941, loss_cls=0.3856, loss_bbox=1.6571, matched_ious=0.3249, loss_iou=0.1112, loss_iou_reg=0.2994, d_time=0.00(0.01), f_time=1.21(1.29), b_time=1.21(1.30)  Time cost: 20:35/17:33 [20:37/22:31:27]  Acc_iter 950         Data time: 0.00(0.01)  Forward time: 1.21(1.29)  Batch time: 1.21(1.30)
+2025-09-04 20:09:54,355   INFO  Train:    1/36 (  3%) [ 999/1759 ( 57%)]  Loss: 6.829 (14.4)  LR: 3.104e-04  Grad: 9.4202  max=0.2916(module.dense_head.heatmap_head.1.weight)  min: -0.2818(module.backbone_3d.cls_conv.3.bias)  NaN: False  loss_hm=1.4975, loss_cls=0.3841, loss_bbox=1.6376, matched_ious=0.3221, loss_iou=0.1065, loss_iou_reg=0.3016, d_time=0.00(0.01), f_time=1.37(1.29), b_time=1.38(1.30)  Time cost: 21:38/16:27 [21:40/22:29:00]  Acc_iter 1000        Data time: 0.00(0.01)  Forward time: 1.37(1.29)  Batch time: 1.38(1.30)
+2025-09-04 20:10:58,477   INFO  Train:    1/36 (  3%) [1049/1759 ( 60%)]  Loss: 6.783 (14.0)  LR: 3.114e-04  Grad: 9.4897  max=0.2297(module.dense_head.decoder.multihead_attn.in_proj_weight)  min: -0.2521(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.4173, loss_cls=0.3623, loss_bbox=1.6269, matched_ious=0.3264, loss_iou=0.1109, loss_iou_reg=0.2994, d_time=0.00(0.01), f_time=1.26(1.29), b_time=1.27(1.30)  Time cost: 22:42/15:21 [22:45/22:27:07]  Acc_iter 1050        Data time: 0.00(0.01)  Forward time: 1.26(1.29)  Batch time: 1.27(1.30)
+2025-09-04 20:12:01,268   INFO  Train:    1/36 (  3%) [1099/1759 ( 62%)]  Loss: 6.502 (13.7)  LR: 3.125e-04  Grad: 9.7439  max=0.2249(module.dense_head.decoder.multihead_attn.in_proj_weight)  min: -0.2561(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.4536, loss_cls=0.3635, loss_bbox=1.7046, matched_ious=0.3256, loss_iou=0.1105, loss_iou_reg=0.2969, d_time=0.00(0.01), f_time=1.24(1.29), b_time=1.24(1.30)  Time cost: 23:45/14:15 [23:47/22:24:03]  Acc_iter 1100        Data time: 0.00(0.01)  Forward time: 1.24(1.29)  Batch time: 1.24(1.30)
+2025-09-04 20:13:03,895   INFO  Train:    1/36 (  3%) [1149/1759 ( 65%)]  Loss: 6.551 (13.4)  LR: 3.137e-04  Grad: 9.7200  max=0.2615(module.dense_head.heatmap_head.1.weight)  min: -0.2422(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.4141, loss_cls=0.3599, loss_bbox=1.6421, matched_ious=0.3347, loss_iou=0.1087, loss_iou_reg=0.2952, d_time=0.00(0.01), f_time=1.34(1.29), b_time=1.35(1.29)  Time cost: 24:48/13:09 [24:50/22:21:01]  Acc_iter 1150        Data time: 0.00(0.01)  Forward time: 1.34(1.29)  Batch time: 1.35(1.29)
+2025-09-04 20:14:08,674   INFO  Train:    1/36 (  3%) [1199/1759 ( 68%)]  Loss: 6.920 (13.1)  LR: 3.149e-04  Grad: 9.8739  max=0.3066(module.vfe.pfn_layers.0.linear.weight)  min: -0.2658(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.4148, loss_cls=0.3560, loss_bbox=1.6531, matched_ious=0.3400, loss_iou=0.1096, loss_iou_reg=0.2895, d_time=0.00(0.01), f_time=1.24(1.29), b_time=1.24(1.29)  Time cost: 25:53/12:04 [25:55/22:20:00]  Acc_iter 1200        Data time: 0.00(0.01)  Forward time: 1.24(1.29)  Batch time: 1.24(1.29)
+2025-09-04 20:15:12,769   INFO  Train:    1/36 (  3%) [1249/1759 ( 71%)]  Loss: 6.484 (12.8)  LR: 3.162e-04  Grad: 9.6068  max=0.2207(module.dense_head.decoder.self_attn.in_proj_weight)  min: -0.2634(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.3640, loss_cls=0.3512, loss_bbox=1.6292, matched_ious=0.3467, loss_iou=0.1076, loss_iou_reg=0.2913, d_time=0.00(0.01), f_time=1.21(1.29), b_time=1.21(1.29)  Time cost: 26:57/10:59 [26:59/22:18:25]  Acc_iter 1250        Data time: 0.00(0.01)  Forward time: 1.21(1.29)  Batch time: 1.21(1.29)
+2025-09-04 20:16:17,773   INFO  Train:    1/36 (  3%) [1299/1759 ( 74%)]  Loss: 6.069 (12.6)  LR: 3.175e-04  Grad: 9.7302  max=0.2205(module.dense_head.decoder.multihead_attn.in_proj_weight)  min: -0.3335(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.3737, loss_cls=0.3512, loss_bbox=1.6301, matched_ious=0.3469, loss_iou=0.1097, loss_iou_reg=0.2879, d_time=0.00(0.01), f_time=1.28(1.29), b_time=1.28(1.29)  Time cost: 28:02/09:55 [28:04/22:17:35]  Acc_iter 1300        Data time: 0.00(0.01)  Forward time: 1.28(1.29)  Batch time: 1.28(1.29)
+2025-09-04 20:17:20,711   INFO  Train:    1/36 (  3%) [1349/1759 ( 77%)]  Loss: 7.312 (12.3)  LR: 3.189e-04  Grad: 9.7519  max=0.2336(module.backbone_3d.cls_conv.3.bias)  min: -0.2609(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.3677, loss_cls=0.3472, loss_bbox=1.6702, matched_ious=0.3473, loss_iou=0.1114, loss_iou_reg=0.2877, d_time=0.00(0.01), f_time=1.26(1.28), b_time=1.27(1.29)  Time cost: 29:05/08:49 [29:07/22:15:10]  Acc_iter 1350        Data time: 0.00(0.01)  Forward time: 1.26(1.28)  Batch time: 1.27(1.29)
+2025-09-04 20:18:25,239   INFO  Train:    1/36 (  3%) [1399/1759 ( 80%)]  Loss: 5.712 (12.1)  LR: 3.203e-04  Grad: 9.7575  max=0.2513(module.dense_head.decoder.self_attn.in_proj_weight)  min: -0.2911(module.dense_head.heatmap_head.1.weight)  NaN: False  loss_hm=1.3399, loss_cls=0.3411, loss_bbox=1.6171, matched_ious=0.3469, loss_iou=0.1064, loss_iou_reg=0.2894, d_time=0.00(0.01), f_time=1.30(1.28), b_time=1.30(1.29)  Time cost: 30:09/07:45 [30:11/22:14:01]  Acc_iter 1400        Data time: 0.00(0.01)  Forward time: 1.30(1.28)  Batch time: 1.30(1.29)
+2025-09-04 20:19:28,387   INFO  Train:    1/36 (  3%) [1449/1759 ( 82%)]  Loss: 6.201 (11.9)  LR: 3.217e-04  Grad: 9.5525  max=0.2202(module.dense_head.decoder.self_attn.in_proj_weight)  min: -0.2433(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.3414, loss_cls=0.3418, loss_bbox=1.5767, matched_ious=0.3533, loss_iou=0.1086, loss_iou_reg=0.2861, d_time=0.00(0.01), f_time=1.22(1.28), b_time=1.23(1.29)  Time cost: 31:12/06:40 [31:14/22:11:53]  Acc_iter 1450        Data time: 0.00(0.01)  Forward time: 1.22(1.28)  Batch time: 1.23(1.29)
+2025-09-04 20:20:32,764   INFO  Train:    1/36 (  3%) [1499/1759 ( 85%)]  Loss: 7.025 (11.7)  LR: 3.233e-04  Grad: 9.8951  max=0.3927(module.vfe.pfn_layers.0.linear.weight)  min: -0.2599(module.dense_head.heatmap_head.1.weight)  NaN: False  loss_hm=1.3371, loss_cls=0.3351, loss_bbox=1.6017, matched_ious=0.3417, loss_iou=0.1090, loss_iou_reg=0.2902, d_time=0.00(0.01), f_time=1.32(1.28), b_time=1.32(1.29)  Time cost: 32:17/05:35 [32:19/22:10:40]  Acc_iter 1500        Data time: 0.00(0.01)  Forward time: 1.32(1.28)  Batch time: 1.32(1.29)
+2025-09-04 20:21:35,317   INFO  Train:    1/36 (  3%) [1549/1759 ( 88%)]  Loss: 5.263 (11.6)  LR: 3.248e-04  Grad: 9.5943  max=0.3962(module.vfe.pfn_layers.0.linear.weight)  min: -0.2536(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.3452, loss_cls=0.3376, loss_bbox=1.6974, matched_ious=0.3442, loss_iou=0.1056, loss_iou_reg=0.2898, d_time=0.00(0.01), f_time=1.25(1.28), b_time=1.25(1.29)  Time cost: 33:19/04:30 [33:21/22:08:15]  Acc_iter 1550        Data time: 0.00(0.01)  Forward time: 1.25(1.28)  Batch time: 1.25(1.29)
+2025-09-04 20:22:38,613   INFO  Train:    1/36 (  3%) [1599/1759 ( 91%)]  Loss: 5.869 (11.4)  LR: 3.265e-04  Grad: 9.8174  max=0.5972(module.vfe.pfn_layers.0.linear.weight)  min: -0.3964(module.backbone_3d.cls_conv.3.weight)  NaN: False  loss_hm=1.2995, loss_cls=0.3348, loss_bbox=1.5065, matched_ious=0.3584, loss_iou=0.1043, loss_iou_reg=0.2833, d_time=0.00(0.01), f_time=1.29(1.28), b_time=1.30(1.29)  Time cost: 34:22/03:26 [34:25/22:06:24]  Acc_iter 1600        Data time: 0.00(0.01)  Forward time: 1.29(1.28)  Batch time: 1.30(1.29)
+2025-09-04 20:23:43,029   INFO  Train:    1/36 (  3%) [1649/1759 ( 94%)]  Loss: 4.996 (11.2)  LR: 3.281e-04  Grad: 9.5857  max=0.3201(module.vfe.pfn_layers.0.linear.weight)  min: -0.2501(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.3356, loss_cls=0.3366, loss_bbox=1.6495, matched_ious=0.3540, loss_iou=0.1074, loss_iou_reg=0.2860, d_time=0.00(0.01), f_time=1.32(1.28), b_time=1.32(1.29)  Time cost: 35:27/02:21 [35:29/22:05:18]  Acc_iter 1650        Data time: 0.00(0.01)  Forward time: 1.32(1.28)  Batch time: 1.32(1.29)
+2025-09-04 20:24:46,497   INFO  Train:    1/36 (  3%) [1699/1759 ( 97%)]  Loss: 6.485 (11.1)  LR: 3.299e-04  Grad: 9.8621  max=0.4117(module.backbone_3d.cls_conv.3.weight)  min: -0.2911(module.backbone_3d.cls_conv.3.weight)  NaN: False  loss_hm=1.3249, loss_cls=0.3364, loss_bbox=1.5411, matched_ious=0.3640, loss_iou=0.1059, loss_iou_reg=0.2805, d_time=0.01(0.01), f_time=1.22(1.28), b_time=1.23(1.29)  Time cost: 36:30/01:17 [36:33/22:03:37]  Acc_iter 1700        Data time: 0.01(0.01)  Forward time: 1.22(1.28)  Batch time: 1.23(1.29)
+2025-09-04 20:25:49,472   INFO  Train:    1/36 (  3%) [1749/1759 ( 99%)]  Loss: 7.718 (10.9)  LR: 3.316e-04  Grad: 9.8463  max=0.4568(module.vfe.pfn_layers.0.linear.weight)  min: -0.3154(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.3245, loss_cls=0.3334, loss_bbox=1.5807, matched_ious=0.3529, loss_iou=0.1064, loss_iou_reg=0.2855, d_time=0.00(0.01), f_time=1.19(1.28), b_time=1.20(1.29)  Time cost: 37:33/00:12 [37:36/22:01:41]  Acc_iter 1750        Data time: 0.00(0.01)  Forward time: 1.19(1.28)  Batch time: 1.20(1.29)
+2025-09-04 20:26:00,278   INFO  Train:    1/36 (  3%) [1758/1759 (100%)]  Loss: 6.831 (10.9)  LR: 3.320e-04  Grad: 9.9509  max=0.2512(module.backbone_3d.cls_conv.3.weight)  min: -0.2552(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.2793, loss_cls=0.3148, loss_bbox=1.5739, matched_ious=0.3688, loss_iou=0.1103, loss_iou_reg=0.2774, d_time=0.00(0.01), f_time=0.75(1.28), b_time=0.75(1.29)  Time cost: 37:44/00:01 [37:46/22:01:02]  Acc_iter 1759        Data time: 0.00(0.01)  Forward time: 0.75(1.28)  Batch time: 0.75(1.29)
+
+                                               [Aepochs:   3%|▎         | 1/36 [37:47<22:02:32, 2267.20s/it]epochs:   3%|▎         | 1/36 [37:47<22:02:32, 2267.21s/it]epochs:   3%|▎         | 1/36 [37:47<22:02:35, 2267.29s/it]epochs:   3%|▎         | 1/36 [37:47<22:02:35, 2267.29s/it]epochs:   3%|▎         | 1/36 [37:47<22:02:35, 2267.30s/it]epochs:   3%|▎         | 1/36 [37:47<22:02:35, 2267.30s/it]epochs:   3%|▎         | 1/36 [37:47<22:02:35, 2267.30s/it]epochs:   3%|▎         | 1/36 [37:47<22:02:46, 2267.60s/it]
+train:   0%|          | 0/1759 [00:00<?, ?it/s][A2025-09-04 20:26:05,392   INFO  Train:    2/36 (  6%) [   0/1759 (  0%)]  Loss: 5.586 (5.59)  LR: 3.320e-04  Grad: 9.8888  max=0.2503(module.dense_head.decoder.self_attn.in_proj_weight)  min: -0.4509(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.1827, loss_cls=0.3154, loss_bbox=1.4514, matched_ious=0.3698, loss_iou=0.1065, loss_iou_reg=0.2884, d_time=1.29(1.29), f_time=2.68(2.68), b_time=3.97(3.97)  Time cost: 00:03/1:38:51 [37:51/57:39:55]  Acc_iter 1760        Data time: 1.29(1.29)  Forward time: 2.68(2.68)  Batch time: 3.97(3.97)
+2025-09-04 20:26:58,038   INFO  Train:    2/36 (  6%) [  40/1759 (  2%)]  Loss: 6.221 (5.97)  LR: 3.335e-04  Grad: 9.8933  max=0.2383(module.dense_head.decoder.self_attn.in_proj_weight)  min: -0.2472(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.2657, loss_cls=0.3203, loss_bbox=1.5114, matched_ious=0.3548, loss_iou=0.1095, loss_iou_reg=0.2870, d_time=0.00(0.04), f_time=1.20(1.34), b_time=1.20(1.38)  Time cost: 00:56/39:08 [38:44/23:21:00]  Acc_iter 1800        Data time: 0.00(0.04)  Forward time: 1.20(1.34)  Batch time: 1.20(1.38)
+2025-09-04 20:28:01,480   INFO  Train:    2/36 (  6%) [  90/1759 (  5%)]  Loss: 5.975 (6.00)  LR: 3.353e-04  Grad: 9.8141  max=0.2399(module.dense_head.decoder.self_attn.in_proj_weight)  min: -0.3748(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.2730, loss_cls=0.3296, loss_bbox=1.5445, matched_ious=0.3668, loss_iou=0.1083, loss_iou_reg=0.2814, d_time=0.00(0.02), f_time=1.27(1.30), b_time=1.27(1.32)  Time cost: 01:59/36:30 [39:48/22:25:01]  Acc_iter 1850        Data time: 0.00(0.02)  Forward time: 1.27(1.30)  Batch time: 1.27(1.32)
+2025-09-04 20:29:04,703   INFO  Train:    2/36 (  6%) [ 140/1759 (  8%)]  Loss: 6.540 (6.03)  LR: 3.373e-04  Grad: 9.7879  max=0.3238(module.dense_head.prediction_head.height.1.bias)  min: -0.2413(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.2874, loss_cls=0.3224, loss_bbox=1.5304, matched_ious=0.3580, loss_iou=0.1049, loss_iou_reg=0.2851, d_time=0.00(0.01), f_time=1.22(1.29), b_time=1.22(1.30)  Time cost: 03:02/34:57 [40:51/22:06:24]  Acc_iter 1900        Data time: 0.00(0.01)  Forward time: 1.22(1.29)  Batch time: 1.22(1.30)
+2025-09-04 20:30:08,206   INFO  Train:    2/36 (  6%) [ 190/1759 ( 11%)]  Loss: 6.065 (5.99)  LR: 3.393e-04  Grad: 9.7001  max=0.3473(module.backbone_3d.cls_conv.3.weight)  min: -0.4031(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.2201, loss_cls=0.3204, loss_bbox=1.4900, matched_ious=0.3766, loss_iou=0.1048, loss_iou_reg=0.2764, d_time=0.00(0.01), f_time=1.33(1.28), b_time=1.33(1.29)  Time cost: 04:06/33:42 [41:54/21:58:28]  Acc_iter 1950        Data time: 0.00(0.01)  Forward time: 1.33(1.28)  Batch time: 1.33(1.29)
+2025-09-04 20:31:11,969   INFO  Train:    2/36 (  6%) [ 240/1759 ( 14%)]  Loss: 6.448 (5.98)  LR: 3.413e-04  Grad: 9.6155  max=0.2530(module.backbone_3d.cls_conv.3.weight)  min: -0.2787(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.2525, loss_cls=0.3228, loss_bbox=1.5273, matched_ious=0.3737, loss_iou=0.1056, loss_iou_reg=0.2781, d_time=0.00(0.01), f_time=1.29(1.28), b_time=1.29(1.29)  Time cost: 05:09/32:33 [42:58/21:54:29]  Acc_iter 2000        Data time: 0.00(0.01)  Forward time: 1.29(1.28)  Batch time: 1.29(1.29)
+2025-09-04 20:32:15,943   INFO  Train:    2/36 (  6%) [ 290/1759 ( 16%)]  Loss: 6.875 (5.98)  LR: 3.434e-04  Grad: 9.8044  max=0.2436(module.dense_head.decoder.self_attn.in_proj_weight)  min: -0.3511(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.2333, loss_cls=0.3217, loss_bbox=1.5383, matched_ious=0.3765, loss_iou=0.1069, loss_iou_reg=0.2786, d_time=0.00(0.01), f_time=1.25(1.28), b_time=1.25(1.29)  Time cost: 06:13/31:27 [44:02/21:52:15]  Acc_iter 2050        Data time: 0.00(0.01)  Forward time: 1.25(1.28)  Batch time: 1.25(1.29)
+2025-09-04 20:33:19,541   INFO  Train:    2/36 (  6%) [ 340/1759 ( 19%)]  Loss: 6.116 (5.98)  LR: 3.455e-04  Grad: 9.7942  max=0.2582(module.vfe.pfn_layers.0.linear.weight)  min: -0.2408(module.dense_head.decoder.self_attn.in_proj_weight)  NaN: False  loss_hm=1.2741, loss_cls=0.3201, loss_bbox=1.5342, matched_ious=0.3744, loss_iou=0.1072, loss_iou_reg=0.2769, d_time=0.00(0.01), f_time=1.28(1.28), b_time=1.29(1.28)  Time cost: 07:17/30:20 [45:06/21:49:14]  Acc_iter 2100        Data time: 0.00(0.01)  Forward time: 1.28(1.28)  Batch time: 1.29(1.28)
+2025-09-04 20:34:24,445   INFO  Train:    2/36 (  6%) [ 390/1759 ( 22%)]  Loss: 6.123 (5.96)  LR: 3.477e-04  Grad: 9.7045  max=0.2481(module.vfe.pfn_layers.0.linear.weight)  min: -0.2453(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.2424, loss_cls=0.3126, loss_bbox=1.4820, matched_ious=0.3794, loss_iou=0.1058, loss_iou_reg=0.2762, d_time=0.01(0.01), f_time=1.23(1.28), b_time=1.24(1.29)  Time cost: 08:22/29:19 [46:11/21:50:08]  Acc_iter 2150        Data time: 0.01(0.01)  Forward time: 1.23(1.28)  Batch time: 1.24(1.29)
+2025-09-04 20:35:27,749   INFO  Train:    2/36 (  6%) [ 440/1759 ( 25%)]  Loss: 5.585 (5.94)  LR: 3.499e-04  Grad: 9.8090  max=0.2469(module.vfe.pfn_layers.0.linear.weight)  min: -0.2266(module.dense_head.decoder.self_attn.in_proj_weight)  NaN: False  loss_hm=1.1918, loss_cls=0.3151, loss_bbox=1.4123, matched_ious=0.3832, loss_iou=0.1039, loss_iou_reg=0.2779, d_time=0.00(0.01), f_time=1.26(1.27), b_time=1.27(1.28)  Time cost: 09:25/28:12 [47:14/21:46:52]  Acc_iter 2200        Data time: 0.00(0.01)  Forward time: 1.26(1.27)  Batch time: 1.27(1.28)
+2025-09-04 20:36:31,301   INFO  Train:    2/36 (  6%) [ 490/1759 ( 28%)]  Loss: 6.519 (5.93)  LR: 3.522e-04  Grad: 9.9267  max=0.2855(module.vfe.pfn_layers.0.linear.weight)  min: -0.2953(module.backbone_3d.cls_conv.3.weight)  NaN: False  loss_hm=1.2353, loss_cls=0.3090, loss_bbox=1.4881, matched_ious=0.3673, loss_iou=0.1052, loss_iou_reg=0.2799, d_time=0.00(0.01), f_time=1.19(1.27), b_time=1.20(1.28)  Time cost: 10:29/27:06 [48:17/21:44:35]  Acc_iter 2250        Data time: 0.00(0.01)  Forward time: 1.19(1.27)  Batch time: 1.20(1.28)
+2025-09-04 20:37:36,238   INFO  Train:    2/36 (  6%) [ 540/1759 ( 31%)]  Loss: 6.630 (5.91)  LR: 3.545e-04  Grad: 9.7666  max=0.2999(module.vfe.pfn_layers.0.linear.weight)  min: -0.2509(module.dense_head.decoder.self_attn.in_proj_weight)  NaN: False  loss_hm=1.1992, loss_cls=0.3127, loss_bbox=1.4917, matched_ious=0.3933, loss_iou=0.1043, loss_iou_reg=0.2698, d_time=0.00(0.01), f_time=1.26(1.28), b_time=1.26(1.28)  Time cost: 11:34/26:04 [49:22/21:45:08]  Acc_iter 2300        Data time: 0.00(0.01)  Forward time: 1.26(1.28)  Batch time: 1.26(1.28)
+2025-09-04 20:38:39,565   INFO  Train:    2/36 (  6%) [ 590/1759 ( 34%)]  Loss: 5.683 (5.90)  LR: 3.569e-04  Grad: 9.8790  max=0.7148(module.vfe.pfn_layers.0.linear.weight)  min: -0.2750(module.vfe.pfn_layers.1.linear.weight)  NaN: False  loss_hm=1.2177, loss_cls=0.3107, loss_bbox=1.5015, matched_ious=0.3860, loss_iou=0.1045, loss_iou_reg=0.2734, d_time=0.00(0.01), f_time=1.29(1.27), b_time=1.30(1.28)  Time cost: 12:37/24:58 [50:26/21:42:37]  Acc_iter 2350        Data time: 0.00(0.01)  Forward time: 1.29(1.27)  Batch time: 1.30(1.28)
+2025-09-04 20:39:42,006   INFO  Train:    2/36 (  6%) [ 640/1759 ( 36%)]  Loss: 5.417 (5.89)  LR: 3.593e-04  Grad: 9.7863  max=0.4168(module.vfe.pfn_layers.0.linear.weight)  min: -0.2483(module.dense_head.decoder.self_attn.in_proj_weight)  NaN: False  loss_hm=1.1991, loss_cls=0.3062, loss_bbox=1.4628, matched_ious=0.3828, loss_iou=0.1073, loss_iou_reg=0.2760, d_time=0.01(0.01), f_time=1.22(1.27), b_time=1.22(1.28)  Time cost: 13:39/23:51 [51:28/21:38:57]  Acc_iter 2400        Data time: 0.01(0.01)  Forward time: 1.22(1.27)  Batch time: 1.22(1.28)
+2025-09-04 20:40:45,743   INFO  Train:    2/36 (  6%) [ 690/1759 ( 39%)]  Loss: 5.140 (5.88)  LR: 3.618e-04  Grad: 9.6237  max=0.3000(module.vfe.pfn_layers.0.linear.weight)  min: -0.2375(module.dense_head.decoder.self_attn.in_proj_weight)  NaN: False  loss_hm=1.1910, loss_cls=0.3099, loss_bbox=1.4500, matched_ious=0.3863, loss_iou=0.1075, loss_iou_reg=0.2721, d_time=0.00(0.01), f_time=1.34(1.27), b_time=1.34(1.28)  Time cost: 14:43/22:47 [52:32/21:37:33]  Acc_iter 2450        Data time: 0.00(0.01)  Forward time: 1.34(1.27)  Batch time: 1.34(1.28)
+2025-09-04 20:41:50,041   INFO  Train:    2/36 (  6%) [ 740/1759 ( 42%)]  Loss: 5.301 (5.87)  LR: 3.643e-04  Grad: 9.7263  max=0.4730(module.vfe.pfn_layers.0.linear.weight)  min: -0.3029(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.2016, loss_cls=0.3092, loss_bbox=1.4308, matched_ious=0.3837, loss_iou=0.1045, loss_iou_reg=0.2778, d_time=0.00(0.01), f_time=1.36(1.27), b_time=1.37(1.28)  Time cost: 15:48/21:43 [53:36/21:36:58]  Acc_iter 2500        Data time: 0.00(0.01)  Forward time: 1.36(1.27)  Batch time: 1.37(1.28)
+2025-09-04 20:42:53,168   INFO  Train:    2/36 (  6%) [ 790/1759 ( 45%)]  Loss: 5.573 (5.86)  LR: 3.669e-04  Grad: 9.7620  max=0.2816(module.vfe.pfn_layers.0.linear.weight)  min: -0.6918(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.1711, loss_cls=0.2969, loss_bbox=1.4673, matched_ious=0.3895, loss_iou=0.1090, loss_iou_reg=0.2706, d_time=0.00(0.01), f_time=1.28(1.27), b_time=1.28(1.28)  Time cost: 16:51/20:38 [54:39/21:34:49]  Acc_iter 2550        Data time: 0.00(0.01)  Forward time: 1.28(1.27)  Batch time: 1.28(1.28)
+2025-09-04 20:43:56,862   INFO  Train:    2/36 (  6%) [ 840/1759 ( 48%)]  Loss: 5.729 (5.85)  LR: 3.695e-04  Grad: 9.9801  max=0.4102(module.vfe.pfn_layers.0.linear.weight)  min: -0.4949(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.2124, loss_cls=0.3092, loss_bbox=1.4459, matched_ious=0.3814, loss_iou=0.1054, loss_iou_reg=0.2775, d_time=0.00(0.01), f_time=1.21(1.27), b_time=1.21(1.28)  Time cost: 17:54/19:34 [55:43/21:33:29]  Acc_iter 2600        Data time: 0.00(0.01)  Forward time: 1.21(1.27)  Batch time: 1.21(1.28)
+2025-09-04 20:44:59,914   INFO  Train:    2/36 (  6%) [ 890/1759 ( 51%)]  Loss: 4.283 (5.84)  LR: 3.722e-04  Grad: 2.7445  max=0.4989(module.vfe.pfn_layers.0.linear.weight)  min: -0.2722(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.1829, loss_cls=0.3054, loss_bbox=1.4683, matched_ious=0.3922, loss_iou=0.1044, loss_iou_reg=0.2701, d_time=0.00(0.01), f_time=1.31(1.27), b_time=1.31(1.28)  Time cost: 18:57/18:29 [56:46/21:31:27]  Acc_iter 2650        Data time: 0.00(0.01)  Forward time: 1.31(1.27)  Batch time: 1.31(1.28)
+2025-09-04 20:46:02,770   INFO  Train:    2/36 (  6%) [ 940/1759 ( 53%)]  Loss: 5.320 (5.83)  LR: 3.749e-04  Grad: 2.5255  max=0.2767(module.backbone_3d.cls_conv.3.weight)  min: -0.1976(module.dense_head.prediction_head.height.1.bias)  NaN: False  loss_hm=1.1668, loss_cls=0.2997, loss_bbox=1.4212, matched_ious=0.3875, loss_iou=0.1060, loss_iou_reg=0.2713, d_time=0.00(0.01), f_time=1.26(1.27), b_time=1.27(1.28)  Time cost: 20:00/17:25 [57:49/21:29:19]  Acc_iter 2700        Data time: 0.00(0.01)  Forward time: 1.26(1.27)  Batch time: 1.27(1.28)
+2025-09-04 20:47:06,447   INFO  Train:    2/36 (  6%) [ 990/1759 ( 56%)]  Loss: 6.250 (5.83)  LR: 3.777e-04  Grad: 2.7439  max=0.3121(module.vfe.pfn_layers.0.linear.weight)  min: -0.2474(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.1706, loss_cls=0.2962, loss_bbox=1.5043, matched_ious=0.3882, loss_iou=0.1067, loss_iou_reg=0.2710, d_time=0.00(0.01), f_time=1.30(1.27), b_time=1.31(1.28)  Time cost: 21:04/16:21 [58:53/21:28:08]  Acc_iter 2750        Data time: 0.00(0.01)  Forward time: 1.30(1.27)  Batch time: 1.31(1.28)
+2025-09-04 20:48:11,349   INFO  Train:    2/36 (  6%) [1040/1759 ( 59%)]  Loss: 5.461 (5.82)  LR: 3.805e-04  Grad: 3.4352  max=0.8941(module.vfe.pfn_layers.0.linear.weight)  min: -0.2288(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.1990, loss_cls=0.3011, loss_bbox=1.4667, matched_ious=0.3876, loss_iou=0.1052, loss_iou_reg=0.2753, d_time=0.00(0.01), f_time=1.19(1.27), b_time=1.20(1.28)  Time cost: 22:09/15:18 [59:57/21:28:08]  Acc_iter 2800        Data time: 0.00(0.01)  Forward time: 1.19(1.27)  Batch time: 1.20(1.28)
+2025-09-04 20:49:14,743   INFO  Train:    2/36 (  6%) [1090/1759 ( 62%)]  Loss: 5.262 (5.81)  LR: 3.834e-04  Grad: 3.2712  max=0.8546(module.vfe.pfn_layers.0.linear.weight)  min: -0.2017(module.backbone_3d.cls_conv.3.bias)  NaN: False  loss_hm=1.1415, loss_cls=0.2989, loss_bbox=1.4055, matched_ious=0.4049, loss_iou=0.1024, loss_iou_reg=0.2635, d_time=0.00(0.01), f_time=1.18(1.27), b_time=1.19(1.28)  Time cost: 23:12/14:14 [1:01:01/21:26:39]  Acc_iter 2850        Data time: 0.00(0.01)  Forward time: 1.18(1.27)  Batch time: 1.19(1.28)
+2025-09-04 20:50:18,490   INFO  Train:    2/36 (  6%) [1140/1759 ( 65%)]  Loss: 5.595 (5.80)  LR: 3.863e-04  Grad: 3.6006  max=0.8852(module.vfe.pfn_layers.0.linear.weight)  min: -0.1523(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.1613, loss_cls=0.2959, loss_bbox=1.4421, matched_ious=0.3883, loss_iou=0.1041, loss_iou_reg=0.2714, d_time=0.00(0.01), f_time=1.22(1.27), b_time=1.22(1.28)  Time cost: 24:16/13:10 [1:02:05/21:25:31]  Acc_iter 2900        Data time: 0.00(0.01)  Forward time: 1.22(1.27)  Batch time: 1.22(1.28)
+2025-09-04 20:51:22,218   INFO  Train:    2/36 (  6%) [1190/1759 ( 68%)]  Loss: 5.366 (5.79)  LR: 3.893e-04  Grad: 3.2001  max=0.4185(module.vfe.pfn_layers.0.linear.weight)  min: -0.4383(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.1216, loss_cls=0.2879, loss_bbox=1.3772, matched_ious=0.4009, loss_iou=0.1030, loss_iou_reg=0.2695, d_time=0.00(0.01), f_time=1.26(1.27), b_time=1.26(1.28)  Time cost: 25:20/12:06 [1:03:08/21:24:22]  Acc_iter 2950        Data time: 0.00(0.01)  Forward time: 1.26(1.27)  Batch time: 1.26(1.28)
+2025-09-04 20:52:25,169   INFO  Train:    2/36 (  6%) [1240/1759 ( 70%)]  Loss: 5.430 (5.78)  LR: 3.923e-04  Grad: 3.6976  max=0.6483(module.vfe.pfn_layers.0.linear.weight)  min: -0.3038(module.dense_head.prediction_head.height.1.bias)  NaN: False  loss_hm=1.1118, loss_cls=0.2886, loss_bbox=1.3232, matched_ious=0.4020, loss_iou=0.1051, loss_iou_reg=0.2683, d_time=0.00(0.01), f_time=1.29(1.27), b_time=1.29(1.28)  Time cost: 26:23/11:02 [1:04:11/21:22:36]  Acc_iter 3000        Data time: 0.00(0.01)  Forward time: 1.29(1.27)  Batch time: 1.29(1.28)
+2025-09-04 20:53:28,921   INFO  Train:    2/36 (  6%) [1290/1759 ( 73%)]  Loss: 5.424 (5.77)  LR: 3.954e-04  Grad: 3.9313  max=0.5810(module.vfe.pfn_layers.0.linear.weight)  min: -0.3838(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.1347, loss_cls=0.2895, loss_bbox=1.3609, matched_ious=0.3924, loss_iou=0.1064, loss_iou_reg=0.2715, d_time=0.01(0.01), f_time=1.32(1.27), b_time=1.32(1.28)  Time cost: 27:26/09:58 [1:05:15/21:21:31]  Acc_iter 3050        Data time: 0.01(0.01)  Forward time: 1.32(1.27)  Batch time: 1.32(1.28)
+2025-09-04 20:54:32,481   INFO  Train:    2/36 (  6%) [1340/1759 ( 76%)]  Loss: 5.501 (5.75)  LR: 3.985e-04  Grad: 3.8705  max=0.1754(module.vfe.pfn_layers.1.linear.weight)  min: -0.5850(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.1105, loss_cls=0.2852, loss_bbox=1.3212, matched_ious=0.4073, loss_iou=0.1042, loss_iou_reg=0.2647, d_time=0.01(0.01), f_time=1.37(1.27), b_time=1.38(1.28)  Time cost: 28:30/08:54 [1:06:19/21:20:17]  Acc_iter 3100        Data time: 0.01(0.01)  Forward time: 1.37(1.27)  Batch time: 1.38(1.28)
+2025-09-04 20:55:35,425   INFO  Train:    2/36 (  6%) [1390/1759 ( 79%)]  Loss: 5.782 (5.74)  LR: 4.017e-04  Grad: 4.2197  max=0.7721(module.vfe.pfn_layers.0.linear.weight)  min: -0.2378(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.1074, loss_cls=0.2811, loss_bbox=1.3883, matched_ious=0.3993, loss_iou=0.1022, loss_iou_reg=0.2703, d_time=0.00(0.01), f_time=1.17(1.27), b_time=1.17(1.28)  Time cost: 29:33/07:50 [1:07:21/21:18:37]  Acc_iter 3150        Data time: 0.00(0.01)  Forward time: 1.17(1.27)  Batch time: 1.17(1.28)
+2025-09-04 20:56:39,399   INFO  Train:    2/36 (  6%) [1440/1759 ( 82%)]  Loss: 5.918 (5.74)  LR: 4.049e-04  Grad: 4.5296  max=1.3564(module.vfe.pfn_layers.0.linear.weight)  min: -0.1597(module.backbone_3d.cls_conv.3.weight)  NaN: False  loss_hm=1.1459, loss_cls=0.2863, loss_bbox=1.3818, matched_ious=0.4018, loss_iou=0.1054, loss_iou_reg=0.2657, d_time=0.00(0.01), f_time=1.40(1.27), b_time=1.40(1.28)  Time cost: 30:37/06:46 [1:08:25/21:17:43]  Acc_iter 3200        Data time: 0.00(0.01)  Forward time: 1.40(1.27)  Batch time: 1.40(1.28)
+2025-09-04 20:57:42,350   INFO  Train:    2/36 (  6%) [1490/1759 ( 85%)]  Loss: 6.630 (5.72)  LR: 4.081e-04  Grad: 6.0168  max=0.6363(module.vfe.pfn_layers.0.linear.weight)  min: -3.6191(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.1132, loss_cls=0.2918, loss_bbox=1.3033, matched_ious=0.4038, loss_iou=0.1024, loss_iou_reg=0.2701, d_time=0.00(0.01), f_time=1.30(1.27), b_time=1.30(1.27)  Time cost: 31:40/05:42 [1:09:28/21:16:07]  Acc_iter 3250        Data time: 0.00(0.01)  Forward time: 1.30(1.27)  Batch time: 1.30(1.27)
+2025-09-04 20:58:47,336   INFO  Train:    2/36 (  6%) [1540/1759 ( 88%)]  Loss: 5.172 (5.71)  LR: 4.114e-04  Grad: 4.9467  max=1.2629(module.vfe.pfn_layers.0.linear.weight)  min: -0.5241(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.1306, loss_cls=0.2908, loss_bbox=1.3502, matched_ious=0.4060, loss_iou=0.1061, loss_iou_reg=0.2683, d_time=0.00(0.01), f_time=1.31(1.27), b_time=1.32(1.28)  Time cost: 32:45/04:39 [1:10:33/21:15:52]  Acc_iter 3300        Data time: 0.00(0.01)  Forward time: 1.31(1.27)  Batch time: 1.32(1.28)
+2025-09-04 20:59:50,516   INFO  Train:    2/36 (  6%) [1590/1759 ( 90%)]  Loss: 5.026 (5.70)  LR: 4.148e-04  Grad: 5.7651  max=0.9848(module.vfe.pfn_layers.0.linear.weight)  min: -2.6789(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.1002, loss_cls=0.2868, loss_bbox=1.2882, matched_ious=0.4076, loss_iou=0.1065, loss_iou_reg=0.2695, d_time=0.00(0.01), f_time=1.35(1.27), b_time=1.36(1.28)  Time cost: 33:48/03:35 [1:11:37/21:14:27]  Acc_iter 3350        Data time: 0.00(0.01)  Forward time: 1.35(1.27)  Batch time: 1.36(1.28)
+2025-09-04 21:00:54,820   INFO  Train:    2/36 (  6%) [1640/1759 ( 93%)]  Loss: 3.867 (5.70)  LR: 4.182e-04  Grad: 5.6017  max=1.4440(module.vfe.pfn_layers.0.linear.weight)  min: -0.4034(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.1183, loss_cls=0.2807, loss_bbox=1.3544, matched_ious=0.4016, loss_iou=0.1045, loss_iou_reg=0.2675, d_time=0.00(0.01), f_time=1.25(1.27), b_time=1.26(1.28)  Time cost: 34:52/02:31 [1:12:41/21:13:43]  Acc_iter 3400        Data time: 0.00(0.01)  Forward time: 1.25(1.27)  Batch time: 1.26(1.28)
+2025-09-04 21:01:57,963   INFO  Train:    2/36 (  6%) [1690/1759 ( 96%)]  Loss: 5.672 (5.69)  LR: 4.217e-04  Grad: 5.9191  max=1.9325(module.vfe.pfn_layers.0.linear.weight)  min: -2.1276(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.1188, loss_cls=0.2781, loss_bbox=1.4206, matched_ious=0.4106, loss_iou=0.1033, loss_iou_reg=0.2663, d_time=0.02(0.01), f_time=1.30(1.27), b_time=1.31(1.28)  Time cost: 35:55/01:27 [1:13:44/21:12:17]  Acc_iter 3450        Data time: 0.02(0.01)  Forward time: 1.30(1.27)  Batch time: 1.31(1.28)
+2025-09-04 21:03:01,474   INFO  Train:    2/36 (  6%) [1740/1759 ( 99%)]  Loss: 4.953 (5.68)  LR: 4.251e-04  Grad: 5.4124  max=1.2977(module.vfe.pfn_layers.0.linear.weight)  min: -0.7196(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0799, loss_cls=0.2718, loss_bbox=1.3545, matched_ious=0.4093, loss_iou=0.1007, loss_iou_reg=0.2675, d_time=0.00(0.01), f_time=1.23(1.27), b_time=1.23(1.28)  Time cost: 36:59/00:24 [1:14:48/21:11:05]  Acc_iter 3500        Data time: 0.00(0.01)  Forward time: 1.23(1.27)  Batch time: 1.23(1.28)
+2025-09-04 21:03:23,186   INFO  Train:    2/36 (  6%) [1758/1759 (100%)]  Loss: 5.071 (5.68)  LR: 4.264e-04  Grad: 6.7515  max=1.3018(module.vfe.pfn_layers.0.linear.weight)  min: -3.1781(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0722, loss_cls=0.2689, loss_bbox=1.2796, matched_ious=0.4235, loss_iou=0.1011, loss_iou_reg=0.2578, d_time=0.00(0.01), f_time=0.67(1.27), b_time=0.68(1.27)  Time cost: 37:21/00:01 [1:15:09/21:10:00]  Acc_iter 3518        Data time: 0.00(0.01)  Forward time: 0.67(1.27)  Batch time: 0.68(1.27)
+
+                                               [Aepochs:   6%|▌         | 2/36 [1:15:10<21:16:40, 2252.94s/it]epochs:   6%|▌         | 2/36 [1:15:10<21:16:40, 2252.95s/it]epochs:   6%|▌         | 2/36 [1:15:10<21:16:40, 2252.96s/it]epochs:   6%|▌         | 2/36 [1:15:10<21:16:40, 2252.96s/it]epochs:   6%|▌         | 2/36 [1:15:10<21:16:40, 2252.96s/it]epochs:   6%|▌         | 2/36 [1:15:10<21:16:40, 2252.96s/it]epochs:   6%|▌         | 2/36 [1:15:10<21:16:40, 2252.97s/it]epochs:   6%|▌         | 2/36 [1:15:10<21:16:44, 2253.07s/it]
+train:   0%|          | 0/1759 [00:00<?, ?it/s][A2025-09-04 21:03:28,410   INFO  Train:    3/36 (  8%) [   0/1759 (  0%)]  Loss: 4.561 (4.56)  LR: 4.265e-04  Grad: 5.8210  max=1.0143(module.vfe.pfn_layers.0.linear.weight)  min: -1.8458(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=0.8848, loss_cls=0.2630, loss_bbox=0.9514, matched_ious=0.4930, loss_iou=0.0984, loss_iou_reg=0.2319, d_time=1.54(1.54), f_time=2.52(2.52), b_time=4.05(4.05)  Time cost: 00:03/1:44:15 [1:15:14/59:04:41]  Acc_iter 3519        Data time: 1.54(1.54)  Forward time: 2.52(2.52)  Batch time: 4.05(4.05)
+2025-09-04 21:04:08,085   INFO  Train:    3/36 (  8%) [  31/1759 (  2%)]  Loss: 5.246 (5.45)  LR: 4.287e-04  Grad: 4.8820  max=1.7459(module.vfe.pfn_layers.0.linear.weight)  min: -0.1781(module.backbone_3d.cls_conv.3.weight)  NaN: False  loss_hm=1.1422, loss_cls=0.2853, loss_bbox=1.3375, matched_ious=0.4039, loss_iou=0.1064, loss_iou_reg=0.2688, d_time=0.00(0.05), f_time=1.24(1.31), b_time=1.25(1.37)  Time cost: 00:43/38:54 [1:15:54/22:25:54]  Acc_iter 3550        Data time: 0.00(0.05)  Forward time: 1.24(1.31)  Batch time: 1.25(1.37)
+2025-09-04 21:05:11,386   INFO  Train:    3/36 (  8%) [  81/1759 (  5%)]  Loss: 5.793 (5.42)  LR: 4.323e-04  Grad: 6.2655  max=3.2252(module.vfe.pfn_layers.0.linear.weight)  min: -2.2490(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0778, loss_cls=0.2724, loss_bbox=1.3588, matched_ious=0.4022, loss_iou=0.1051, loss_iou_reg=0.2700, d_time=0.01(0.02), f_time=1.20(1.28), b_time=1.21(1.31)  Time cost: 01:46/36:20 [1:16:57/21:33:12]  Acc_iter 3600        Data time: 0.01(0.02)  Forward time: 1.20(1.28)  Batch time: 1.21(1.31)
+2025-09-04 21:06:13,950   INFO  Train:    3/36 (  8%) [ 131/1759 (  7%)]  Loss: 5.186 (5.37)  LR: 4.359e-04  Grad: 5.1545  max=2.8718(module.vfe.pfn_layers.0.linear.weight)  min: -1.1598(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0892, loss_cls=0.2716, loss_bbox=1.3329, matched_ious=0.3975, loss_iou=0.1078, loss_iou_reg=0.2698, d_time=0.00(0.02), f_time=1.18(1.27), b_time=1.18(1.28)  Time cost: 02:49/34:45 [1:18:00/21:14:05]  Acc_iter 3650        Data time: 0.00(0.02)  Forward time: 1.18(1.27)  Batch time: 1.18(1.28)
+2025-09-04 21:07:17,760   INFO  Train:    3/36 (  8%) [ 181/1759 ( 10%)]  Loss: 4.857 (5.32)  LR: 4.396e-04  Grad: 6.2387  max=3.1744(module.vfe.pfn_layers.0.linear.weight)  min: -0.0970(module.dense_head.decoder.multihead_attn.in_proj_weight)  NaN: False  loss_hm=1.0404, loss_cls=0.2699, loss_bbox=1.2218, matched_ious=0.4214, loss_iou=0.1039, loss_iou_reg=0.2635, d_time=0.00(0.01), f_time=1.35(1.27), b_time=1.36(1.28)  Time cost: 03:52/33:39 [1:19:04/21:11:42]  Acc_iter 3700        Data time: 0.00(0.01)  Forward time: 1.35(1.27)  Batch time: 1.36(1.28)
+2025-09-04 21:08:20,941   INFO  Train:    3/36 (  8%) [ 231/1759 ( 13%)]  Loss: 5.849 (5.32)  LR: 4.433e-04  Grad: 6.5033  max=2.6180(module.vfe.pfn_layers.0.linear.weight)  min: -3.7367(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0715, loss_cls=0.2701, loss_bbox=1.3412, matched_ious=0.4189, loss_iou=0.1007, loss_iou_reg=0.2636, d_time=0.01(0.01), f_time=1.25(1.27), b_time=1.26(1.28)  Time cost: 04:56/32:30 [1:20:07/21:07:11]  Acc_iter 3750        Data time: 0.01(0.01)  Forward time: 1.25(1.27)  Batch time: 1.26(1.28)
+2025-09-04 21:09:26,573   INFO  Train:    3/36 (  8%) [ 281/1759 ( 16%)]  Loss: 5.348 (5.31)  LR: 4.471e-04  Grad: 9.4829  max=8.1304(module.vfe.pfn_layers.0.linear.weight)  min: -0.3083(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0727, loss_cls=0.2670, loss_bbox=1.2779, matched_ious=0.4107, loss_iou=0.1068, loss_iou_reg=0.2678, d_time=0.00(0.01), f_time=1.24(1.27), b_time=1.24(1.28)  Time cost: 06:01/31:35 [1:21:13/21:12:32]  Acc_iter 3800        Data time: 0.00(0.01)  Forward time: 1.24(1.27)  Batch time: 1.24(1.28)
+2025-09-04 21:10:29,604   INFO  Train:    3/36 (  8%) [ 331/1759 ( 19%)]  Loss: 5.295 (5.30)  LR: 4.509e-04  Grad: 3.7647  max=0.9290(module.vfe.pfn_layers.0.linear.weight)  min: -0.2740(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0787, loss_cls=0.2695, loss_bbox=1.2911, matched_ious=0.4077, loss_iou=0.1025, loss_iou_reg=0.2692, d_time=0.00(0.01), f_time=1.19(1.27), b_time=1.19(1.28)  Time cost: 07:04/30:26 [1:22:16/21:08:10]  Acc_iter 3850        Data time: 0.00(0.01)  Forward time: 1.19(1.27)  Batch time: 1.19(1.28)
+2025-09-04 21:11:33,161   INFO  Train:    3/36 (  8%) [ 381/1759 ( 22%)]  Loss: 5.166 (5.30)  LR: 4.548e-04  Grad: 10.0000  max=8.2041(module.vfe.pfn_layers.0.linear.weight)  min: -0.2684(module.dense_head.prediction_head.height.1.weight)  NaN: False  loss_hm=1.0710, loss_cls=0.2682, loss_bbox=1.2765, matched_ious=0.4108, loss_iou=0.1088, loss_iou_reg=0.2683, d_time=0.00(0.01), f_time=1.16(1.27), b_time=1.17(1.28)  Time cost: 08:08/29:21 [1:23:19/21:06:02]  Acc_iter 3900        Data time: 0.00(0.01)  Forward time: 1.16(1.27)  Batch time: 1.17(1.28)
+2025-09-04 21:12:37,273   INFO  Train:    3/36 (  8%) [ 431/1759 ( 25%)]  Loss: 5.245 (5.28)  LR: 4.587e-04  Grad: 5.5968  max=4.1304(module.vfe.pfn_layers.0.linear.weight)  min: -1.3658(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0319, loss_cls=0.2618, loss_bbox=1.2356, matched_ious=0.4166, loss_iou=0.1051, loss_iou_reg=0.2634, d_time=0.00(0.01), f_time=1.32(1.27), b_time=1.33(1.28)  Time cost: 09:12/28:18 [1:24:23/21:05:25]  Acc_iter 3950        Data time: 0.00(0.01)  Forward time: 1.32(1.27)  Batch time: 1.33(1.28)
+2025-09-04 21:13:41,183   INFO  Train:    3/36 (  8%) [ 481/1759 ( 27%)]  Loss: 6.172 (5.29)  LR: 4.627e-04  Grad: 3.9452  max=1.1443(module.vfe.pfn_layers.0.linear.weight)  min: -2.4778(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0696, loss_cls=0.2680, loss_bbox=1.3238, matched_ious=0.4142, loss_iou=0.1031, loss_iou_reg=0.2638, d_time=0.00(0.01), f_time=1.26(1.27), b_time=1.27(1.28)  Time cost: 10:16/27:14 [1:25:27/21:04:18]  Acc_iter 4000        Data time: 0.00(0.01)  Forward time: 1.26(1.27)  Batch time: 1.27(1.28)
+2025-09-04 21:14:43,487   INFO  Train:    3/36 (  8%) [ 531/1759 ( 30%)]  Loss: 5.286 (5.27)  LR: 4.667e-04  Grad: 3.5738  max=1.5314(module.vfe.pfn_layers.0.linear.weight)  min: -1.4627(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0369, loss_cls=0.2593, loss_bbox=1.2419, matched_ious=0.4163, loss_iou=0.1063, loss_iou_reg=0.2657, d_time=0.00(0.01), f_time=1.16(1.27), b_time=1.17(1.28)  Time cost: 11:18/26:06 [1:26:30/21:00:12]  Acc_iter 4050        Data time: 0.00(0.01)  Forward time: 1.16(1.27)  Batch time: 1.17(1.28)
+2025-09-04 21:15:46,311   INFO  Train:    3/36 (  8%) [ 581/1759 ( 33%)]  Loss: 5.168 (5.25)  LR: 4.707e-04  Grad: 8.6056  max=3.2778(module.vfe.pfn_layers.0.linear.weight)  min: -7.4013(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=0.9963, loss_cls=0.2561, loss_bbox=1.1817, matched_ious=0.4236, loss_iou=0.1024, loss_iou_reg=0.2624, d_time=0.00(0.01), f_time=1.14(1.27), b_time=1.15(1.27)  Time cost: 12:21/25:00 [1:27:32/20:57:31]  Acc_iter 4100        Data time: 0.00(0.01)  Forward time: 1.14(1.27)  Batch time: 1.15(1.27)
+2025-09-04 21:16:50,150   INFO  Train:    3/36 (  8%) [ 631/1759 ( 36%)]  Loss: 5.053 (5.26)  LR: 4.748e-04  Grad: 4.3182  max=1.8350(module.vfe.pfn_layers.0.linear.weight)  min: -1.9481(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0756, loss_cls=0.2668, loss_bbox=1.3051, matched_ious=0.4080, loss_iou=0.1065, loss_iou_reg=0.2702, d_time=0.00(0.01), f_time=1.30(1.27), b_time=1.31(1.27)  Time cost: 13:25/23:57 [1:28:36/20:56:40]  Acc_iter 4150        Data time: 0.00(0.01)  Forward time: 1.30(1.27)  Batch time: 1.31(1.27)
+2025-09-04 21:17:53,834   INFO  Train:    3/36 (  8%) [ 681/1759 ( 39%)]  Loss: 6.064 (5.25)  LR: 4.790e-04  Grad: 4.5951  max=3.5525(module.vfe.pfn_layers.0.linear.weight)  min: -0.1181(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0414, loss_cls=0.2612, loss_bbox=1.2627, matched_ious=0.4158, loss_iou=0.1045, loss_iou_reg=0.2659, d_time=0.01(0.01), f_time=1.39(1.27), b_time=1.39(1.27)  Time cost: 14:28/22:53 [1:29:40/20:55:35]  Acc_iter 4200        Data time: 0.01(0.01)  Forward time: 1.39(1.27)  Batch time: 1.39(1.27)
+2025-09-04 21:18:58,013   INFO  Train:    3/36 (  8%) [ 731/1759 ( 42%)]  Loss: 4.666 (5.23)  LR: 4.832e-04  Grad: 4.6136  max=2.8406(module.vfe.pfn_layers.0.linear.weight)  min: -1.8908(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=0.9876, loss_cls=0.2496, loss_bbox=1.1989, matched_ious=0.4168, loss_iou=0.1024, loss_iou_reg=0.2657, d_time=0.00(0.01), f_time=1.29(1.27), b_time=1.29(1.28)  Time cost: 15:33/21:50 [1:30:44/20:55:09]  Acc_iter 4250        Data time: 0.00(0.01)  Forward time: 1.29(1.27)  Batch time: 1.29(1.28)
+2025-09-04 21:20:03,240   INFO  Train:    3/36 (  8%) [ 781/1759 ( 44%)]  Loss: 4.674 (5.23)  LR: 4.874e-04  Grad: 6.8973  max=1.5431(module.vfe.pfn_layers.0.linear.weight)  min: -4.4305(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0468, loss_cls=0.2543, loss_bbox=1.2560, matched_ious=0.4162, loss_iou=0.1076, loss_iou_reg=0.2651, d_time=0.00(0.01), f_time=1.21(1.27), b_time=1.21(1.28)  Time cost: 16:38/20:48 [1:31:49/20:55:57]  Acc_iter 4300        Data time: 0.00(0.01)  Forward time: 1.21(1.27)  Batch time: 1.21(1.28)
+2025-09-04 21:21:05,923   INFO  Train:    3/36 (  8%) [ 831/1759 ( 47%)]  Loss: 5.070 (5.22)  LR: 4.917e-04  Grad: 9.2819  max=8.2427(module.vfe.pfn_layers.0.linear.weight)  min: -1.5086(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0016, loss_cls=0.2486, loss_bbox=1.2161, matched_ious=0.4143, loss_iou=0.1047, loss_iou_reg=0.2689, d_time=0.00(0.01), f_time=1.17(1.27), b_time=1.17(1.28)  Time cost: 17:41/19:43 [1:32:52/20:53:31]  Acc_iter 4350        Data time: 0.00(0.01)  Forward time: 1.17(1.27)  Batch time: 1.17(1.28)
+2025-09-04 21:22:10,650   INFO  Train:    3/36 (  8%) [ 881/1759 ( 50%)]  Loss: 5.170 (5.21)  LR: 4.960e-04  Grad: 3.6908  max=2.3805(module.vfe.pfn_layers.0.linear.weight)  min: -0.8390(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0263, loss_cls=0.2526, loss_bbox=1.2413, matched_ious=0.4284, loss_iou=0.1016, loss_iou_reg=0.2612, d_time=0.00(0.01), f_time=1.95(1.27), b_time=1.95(1.28)  Time cost: 18:45/18:40 [1:33:57/20:53:32]  Acc_iter 4400        Data time: 0.00(0.01)  Forward time: 1.95(1.27)  Batch time: 1.95(1.28)
+2025-09-04 21:23:14,269   INFO  Train:    3/36 (  8%) [ 931/1759 ( 53%)]  Loss: 5.609 (5.20)  LR: 5.004e-04  Grad: 10.0000  max=9.1547(module.vfe.pfn_layers.0.linear.weight)  min: -1.5599(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0340, loss_cls=0.2617, loss_bbox=1.2075, matched_ious=0.4235, loss_iou=0.1025, loss_iou_reg=0.2647, d_time=0.00(0.01), f_time=1.31(1.27), b_time=1.31(1.28)  Time cost: 19:49/17:36 [1:35:00/20:52:16]  Acc_iter 4450        Data time: 0.00(0.01)  Forward time: 1.31(1.27)  Batch time: 1.31(1.28)
+2025-09-04 21:24:17,457   INFO  Train:    3/36 (  8%) [ 981/1759 ( 56%)]  Loss: 4.787 (5.19)  LR: 5.048e-04  Grad: 3.0006  max=1.2546(module.vfe.pfn_layers.0.linear.weight)  min: -0.8349(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0147, loss_cls=0.2522, loss_bbox=1.2358, matched_ious=0.4294, loss_iou=0.1034, loss_iou_reg=0.2610, d_time=0.00(0.01), f_time=1.19(1.27), b_time=1.20(1.28)  Time cost: 20:52/16:32 [1:36:04/20:50:34]  Acc_iter 4500        Data time: 0.00(0.01)  Forward time: 1.19(1.27)  Batch time: 1.20(1.28)
+2025-09-04 21:25:20,995   INFO  Train:    3/36 (  8%) [1031/1759 ( 59%)]  Loss: 4.915 (5.19)  LR: 5.092e-04  Grad: 5.1931  max=4.3187(module.vfe.pfn_layers.0.linear.weight)  min: -0.2820(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0619, loss_cls=0.2550, loss_bbox=1.2822, matched_ious=0.4208, loss_iou=0.1043, loss_iou_reg=0.2638, d_time=0.00(0.01), f_time=1.29(1.27), b_time=1.30(1.28)  Time cost: 21:56/15:28 [1:37:07/20:49:17]  Acc_iter 4550        Data time: 0.00(0.01)  Forward time: 1.29(1.27)  Batch time: 1.30(1.28)
+2025-09-04 21:26:24,688   INFO  Train:    3/36 (  8%) [1081/1759 ( 61%)]  Loss: 4.516 (5.18)  LR: 5.137e-04  Grad: 6.4250  max=5.9579(module.vfe.pfn_layers.0.linear.weight)  min: -0.4890(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0067, loss_cls=0.2493, loss_bbox=1.1979, matched_ious=0.4272, loss_iou=0.1034, loss_iou_reg=0.2600, d_time=0.00(0.01), f_time=1.25(1.27), b_time=1.25(1.28)  Time cost: 22:59/14:24 [1:38:11/20:48:08]  Acc_iter 4600        Data time: 0.00(0.01)  Forward time: 1.25(1.27)  Batch time: 1.25(1.28)
+2025-09-04 21:27:28,144   INFO  Train:    3/36 (  8%) [1131/1759 ( 64%)]  Loss: 5.195 (5.17)  LR: 5.183e-04  Grad: 6.1824  max=3.3791(module.vfe.pfn_layers.0.linear.weight)  min: -4.5339(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0044, loss_cls=0.2499, loss_bbox=1.1601, matched_ious=0.4378, loss_iou=0.1030, loss_iou_reg=0.2572, d_time=0.00(0.01), f_time=1.27(1.27), b_time=1.27(1.28)  Time cost: 24:03/13:20 [1:39:14/20:46:50]  Acc_iter 4650        Data time: 0.00(0.01)  Forward time: 1.27(1.27)  Batch time: 1.27(1.28)
+2025-09-04 21:28:32,485   INFO  Train:    3/36 (  8%) [1181/1759 ( 67%)]  Loss: 4.915 (5.17)  LR: 5.229e-04  Grad: 10.0000  max=9.4959(module.vfe.pfn_layers.0.linear.weight)  min: -0.5216(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0427, loss_cls=0.2553, loss_bbox=1.2224, matched_ious=0.4223, loss_iou=0.1057, loss_iou_reg=0.2650, d_time=0.00(0.01), f_time=1.21(1.27), b_time=1.21(1.28)  Time cost: 25:07/12:17 [1:40:19/20:46:15]  Acc_iter 4700        Data time: 0.00(0.01)  Forward time: 1.21(1.27)  Batch time: 1.21(1.28)
+2025-09-04 21:29:35,264   INFO  Train:    3/36 (  8%) [1231/1759 ( 70%)]  Loss: 5.541 (5.17)  LR: 5.275e-04  Grad: 5.8318  max=1.8497(module.vfe.pfn_layers.0.linear.weight)  min: -5.1535(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0127, loss_cls=0.2475, loss_bbox=1.2816, matched_ious=0.4238, loss_iou=0.1036, loss_iou_reg=0.2628, d_time=0.00(0.01), f_time=1.24(1.27), b_time=1.24(1.28)  Time cost: 26:10/11:13 [1:41:21/20:44:24]  Acc_iter 4750        Data time: 0.00(0.01)  Forward time: 1.24(1.27)  Batch time: 1.24(1.28)
+2025-09-04 21:30:40,801   INFO  Train:    3/36 (  8%) [1281/1759 ( 73%)]  Loss: 4.866 (5.16)  LR: 5.322e-04  Grad: 8.1196  max=3.7783(module.vfe.pfn_layers.0.linear.weight)  min: -5.8504(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0122, loss_cls=0.2501, loss_bbox=1.2173, matched_ious=0.4303, loss_iou=0.1030, loss_iou_reg=0.2610, d_time=0.00(0.01), f_time=1.39(1.27), b_time=1.40(1.28)  Time cost: 27:15/10:09 [1:42:27/20:44:43]  Acc_iter 4800        Data time: 0.00(0.01)  Forward time: 1.39(1.27)  Batch time: 1.40(1.28)
+2025-09-04 21:31:43,891   INFO  Train:    3/36 (  8%) [1331/1759 ( 76%)]  Loss: 5.611 (5.16)  LR: 5.369e-04  Grad: 7.9870  max=5.0940(module.vfe.pfn_layers.0.linear.weight)  min: -3.2447(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0307, loss_cls=0.2552, loss_bbox=1.2372, matched_ious=0.4262, loss_iou=0.1040, loss_iou_reg=0.2597, d_time=0.00(0.01), f_time=1.32(1.27), b_time=1.32(1.28)  Time cost: 28:19/09:05 [1:43:30/20:43:08]  Acc_iter 4850        Data time: 0.00(0.01)  Forward time: 1.32(1.27)  Batch time: 1.32(1.28)
+2025-09-04 21:32:48,332   INFO  Train:    3/36 (  8%) [1381/1759 ( 79%)]  Loss: 4.936 (5.16)  LR: 5.416e-04  Grad: 7.5937  max=2.7698(module.vfe.pfn_layers.0.linear.weight)  min: -4.7865(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0079, loss_cls=0.2466, loss_bbox=1.2509, matched_ious=0.4329, loss_iou=0.1051, loss_iou_reg=0.2613, d_time=0.00(0.01), f_time=1.21(1.27), b_time=1.21(1.28)  Time cost: 29:23/08:02 [1:44:34/20:42:32]  Acc_iter 4900        Data time: 0.00(0.01)  Forward time: 1.21(1.27)  Batch time: 1.21(1.28)
+2025-09-04 21:33:52,035   INFO  Train:    3/36 (  8%) [1431/1759 ( 81%)]  Loss: 5.700 (5.15)  LR: 5.464e-04  Grad: 7.0228  max=0.2364(module.vfe.pfn_layers.0.linear.weight)  min: -6.6570(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=0.9743, loss_cls=0.2430, loss_bbox=1.1642, matched_ious=0.4391, loss_iou=0.0989, loss_iou_reg=0.2573, d_time=0.01(0.01), f_time=1.15(1.27), b_time=1.15(1.28)  Time cost: 30:27/06:58 [1:45:38/20:41:24]  Acc_iter 4950        Data time: 0.01(0.01)  Forward time: 1.15(1.27)  Batch time: 1.15(1.28)
+2025-09-04 21:34:55,603   INFO  Train:    3/36 (  8%) [1481/1759 ( 84%)]  Loss: 4.892 (5.15)  LR: 5.513e-04  Grad: 10.0000  max=4.5093(module.vfe.pfn_layers.0.linear.weight)  min: -8.8416(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0347, loss_cls=0.2517, loss_bbox=1.2522, matched_ious=0.4264, loss_iou=0.1022, loss_iou_reg=0.2603, d_time=0.00(0.01), f_time=1.21(1.27), b_time=1.21(1.28)  Time cost: 31:30/05:54 [1:46:42/20:40:11]  Acc_iter 5000        Data time: 0.00(0.01)  Forward time: 1.21(1.27)  Batch time: 1.21(1.28)
+2025-09-04 21:35:58,778   INFO  Train:    3/36 (  8%) [1531/1759 ( 87%)]  Loss: 4.873 (5.14)  LR: 5.562e-04  Grad: 3.9422  max=0.2489(module.backbone_3d.cls_conv.3.weight)  min: -3.2669(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=0.9996, loss_cls=0.2456, loss_bbox=1.2049, matched_ious=0.4314, loss_iou=0.1046, loss_iou_reg=0.2566, d_time=0.00(0.01), f_time=1.28(1.27), b_time=1.29(1.28)  Time cost: 32:33/04:50 [1:47:45/20:38:44]  Acc_iter 5050        Data time: 0.00(0.01)  Forward time: 1.28(1.27)  Batch time: 1.29(1.28)
+2025-09-04 21:37:01,530   INFO  Train:    3/36 (  8%) [1581/1759 ( 90%)]  Loss: 4.943 (5.13)  LR: 5.611e-04  Grad: 4.5026  max=2.2326(module.vfe.pfn_layers.0.linear.weight)  min: -3.5218(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=0.9993, loss_cls=0.2419, loss_bbox=1.1432, matched_ious=0.4396, loss_iou=0.1021, loss_iou_reg=0.2562, d_time=0.00(0.01), f_time=1.25(1.27), b_time=1.26(1.28)  Time cost: 33:36/03:46 [1:48:48/20:37:03]  Acc_iter 5100        Data time: 0.00(0.01)  Forward time: 1.25(1.27)  Batch time: 1.26(1.28)
+2025-09-04 21:38:04,848   INFO  Train:    3/36 (  8%) [1631/1759 ( 93%)]  Loss: 4.290 (5.13)  LR: 5.661e-04  Grad: 2.6350  max=0.4967(module.vfe.pfn_layers.0.linear.weight)  min: -1.7156(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=0.9817, loss_cls=0.2376, loss_bbox=1.1861, matched_ious=0.4255, loss_iou=0.1049, loss_iou_reg=0.2622, d_time=0.00(0.01), f_time=1.25(1.27), b_time=1.26(1.27)  Time cost: 34:39/02:43 [1:49:51/20:35:44]  Acc_iter 5150        Data time: 0.00(0.01)  Forward time: 1.25(1.27)  Batch time: 1.26(1.27)
+2025-09-04 21:39:08,727   INFO  Train:    3/36 (  8%) [1681/1759 ( 96%)]  Loss: 5.326 (5.12)  LR: 5.711e-04  Grad: 6.6825  max=5.5622(module.vfe.pfn_layers.0.linear.weight)  min: -1.9155(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=0.9670, loss_cls=0.2402, loss_bbox=1.1192, matched_ious=0.4384, loss_iou=0.1009, loss_iou_reg=0.2574, d_time=0.00(0.01), f_time=1.28(1.27), b_time=1.28(1.27)  Time cost: 35:43/01:39 [1:50:55/20:34:45]  Acc_iter 5200        Data time: 0.00(0.01)  Forward time: 1.28(1.27)  Batch time: 1.28(1.27)
+2025-09-04 21:40:11,878   INFO  Train:    3/36 (  8%) [1731/1759 ( 98%)]  Loss: 4.627 (5.11)  LR: 5.761e-04  Grad: 3.2976  max=0.8677(module.vfe.pfn_layers.0.linear.weight)  min: -2.3066(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=0.9885, loss_cls=0.2360, loss_bbox=1.1603, matched_ious=0.4354, loss_iou=0.1015, loss_iou_reg=0.2567, d_time=0.00(0.01), f_time=1.18(1.27), b_time=1.18(1.27)  Time cost: 36:47/00:35 [1:51:58/20:33:22]  Acc_iter 5250        Data time: 0.00(0.01)  Forward time: 1.18(1.27)  Batch time: 1.18(1.27)
+2025-09-04 21:40:47,141   INFO  Train:    3/36 (  8%) [1758/1759 (100%)]  Loss: 4.665 (5.11)  LR: 5.789e-04  Grad: 3.4524  max=1.8797(module.vfe.pfn_layers.0.linear.weight)  min: -1.1961(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0303, loss_cls=0.2503, loss_bbox=1.1597, matched_ious=0.4292, loss_iou=0.1048, loss_iou_reg=0.2630, d_time=0.00(0.01), f_time=0.71(1.27), b_time=0.71(1.28)  Time cost: 37:22/00:01 [1:52:33/20:33:16]  Acc_iter 5277        Data time: 0.00(0.01)  Forward time: 0.71(1.27)  Batch time: 0.71(1.28)
+
+                                               [Aepochs:   8%|▊         | 3/36 [1:52:34<20:36:51, 2248.84s/it]epochs:   8%|▊         | 3/36 [1:52:34<20:36:52, 2248.87s/it]epochs:   8%|▊         | 3/36 [1:52:34<20:36:52, 2248.87s/it]epochs:   8%|▊         | 3/36 [1:52:34<20:36:52, 2248.87s/it]epochs:   8%|▊         | 3/36 [1:52:34<20:36:53, 2248.89s/it]epochs:   8%|▊         | 3/36 [1:52:34<20:36:52, 2248.87s/it]epochs:   8%|▊         | 3/36 [1:52:34<20:36:53, 2248.88s/it]epochs:   8%|▊         | 3/36 [1:52:34<20:36:55, 2248.97s/it]
+train:   0%|          | 0/1759 [00:00<?, ?it/s][A2025-09-04 21:40:52,565   INFO  Train:    4/36 ( 11%) [   0/1759 (  0%)]  Loss: 4.934 (4.93)  LR: 5.790e-04  Grad: 3.1182  max=1.8089(module.vfe.pfn_layers.0.linear.weight)  min: -1.1632(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=0.9012, loss_cls=0.2368, loss_bbox=1.4496, matched_ious=0.4650, loss_iou=0.0994, loss_iou_reg=0.2445, d_time=1.51(1.51), f_time=2.61(2.61), b_time=4.13(4.13)  Time cost: 00:03/1:43:38 [1:52:39/56:59:56]  Acc_iter 5278        Data time: 1.51(1.51)  Forward time: 2.61(2.61)  Batch time: 4.13(4.13)
+2025-09-04 21:41:21,658   INFO  Train:    4/36 ( 11%) [  22/1759 (  1%)]  Loss: 4.896 (4.87)  LR: 5.812e-04  Grad: 4.0759  max=3.2740(module.vfe.pfn_layers.0.linear.weight)  min: -0.6211(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=1.0041, loss_cls=0.2436, loss_bbox=1.1558, matched_ious=0.4384, loss_iou=0.1035, loss_iou_reg=0.2575, d_time=0.01(0.07), f_time=1.35(1.37), b_time=1.36(1.44)  Time cost: 00:32/41:04 [1:53:08/22:52:02]  Acc_iter 5300        Data time: 0.01(0.07)  Forward time: 1.35(1.37)  Batch time: 1.36(1.44)
+2025-09-04 21:42:25,127   INFO  Train:    4/36 ( 11%) [  72/1759 (  4%)]  Loss: 3.797 (4.92)  LR: 5.864e-04  Grad: 6.2464  max=1.9970(module.vfe.pfn_layers.0.linear.weight)  min: -5.0950(module.vfe.pfn_layers.0.linear.weight)  NaN: False  loss_hm=0.9750, loss_cls=0.2375, loss_bbox=1.2462, matched_ious=0.4279, loss_iou=0.1037, loss_iou_reg=0.2643, d_time=0.00(0.03), f_time=1.32(1.30), b_time=1.32(1.32)  Time cost: 01:36/37:00 [1:54:11/21:12:01]  Acc_iter 5350        Data time: 0.00(0.03)  Forward time: 1.32(1.30)  Batch time: 1.32(1.32)

@@ -10,6 +10,7 @@ from .transfusion_head import TransFusionHead
 from .bev_segmentation_head import BEVSegmentationHead
 from .sparse_center_head import SparseCenterHead
 from .sparse_transfusion_head import SparseTransFusionHead
+from .sparse_former_head import SparseFormerHead
 
 __all__ = {
     'AnchorHeadTemplate': AnchorHeadTemplate,
@@ -24,4 +25,5 @@ __all__ = {
     'BEVSegmentationHead': BEVSegmentationHead,
     'SparseCenterHead': SparseCenterHead,
     'SparseTransFusionHead': SparseTransFusionHead,
+    'SparseFormerHead': SparseFormerHead
 }

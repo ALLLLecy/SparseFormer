@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Python: Debug",
+        "type": "python",
+        "request": "launch",
+        "program": "${workspaceFolder}/tools/train.py",  // 或指定主程序路径
+        "cwd": "${workspaceFolder}/tools",  // <-- 你希望作为起点的相对路径
+        "console": "integratedTerminal"
+      }
+    ]
+  }
+  

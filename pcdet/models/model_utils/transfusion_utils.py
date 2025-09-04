@@ -20,9 +20,13 @@ class PositionEmbeddingLearned(nn.Module):
             nn.ReLU(inplace=True),
             nn.Conv1d(num_pos_feats, num_pos_feats, kernel_size=1))
 
-    def forward(self, xyz):
+    def forward(self, xyz, mask=None):
+        if mask is None:
+            mask = torch.zeros(xyz.shape[:2], dtype=torch.bool, device=xyz.device)  # [B, N]
+        xyz = xyz.masked_fill(mask.unsqueeze(-1), 0.0)
         xyz = xyz.transpose(1, 2).contiguous()
         position_embedding = self.position_embedding_head(xyz)
+        position_embedding = position_embedding.masked_fill(mask.unsqueeze(1), 0.0)
         return position_embedding
 
 
